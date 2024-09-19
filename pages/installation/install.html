@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Installer store locator</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../../vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../vendors/chartist/chartist.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../images/mobilosoft_logo.svg" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Custom CSS for the map containers -->
+    <style>
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="navbar-brand-wrapper d-flex align-items-center">
+                <img src="../../images/mobilosoft_logo.svg" alt="logo" class="logo-dark" width="35" height="35"/>
+                <a class="nav-link text-white" href="index.html" style="font-weight: bold;">Mobilosoft Store Locator</a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
+                <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Installer votre store locator</h5>
+                <ul class="navbar-nav navbar-nav-right ml-auto">
+                    <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
+                        <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                            <img class="img-xs rounded-circle ml-2" src="../../images/mobilosoft_logo.svg" alt="Profile image"> <span class="font-weight-normal">Mobilosoft </span></a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                <img class="img-md rounded-circle" src="../../images/mobilosoft_logo.svg" alt="Profile image" width="35" height="35">
+                                <p class="mb-1 mt-3">Mobilo</p>
+                                <p class="font-weight-light text-muted mb-0">mobilosoft@gmail.com</p>
+                            </div>
+                            <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i>Mon compte</a>
+                            <a class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
+                        </div>
+                    </li>
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item nav-profile"></li>
+                    <li class="nav-item nav-category">
+                        <span class="nav-link">Tableau de bord</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">
+                            <span class="menu-title">Tableau de bord</span>
+                            <i class="icon-screen-desktop menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-category"><span class="nav-link">Emplacements</span></li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                            <span class="menu-title">Theme</span>
+                            <i class="icon-layers menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="template.html">Utiliser un template</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="editer.html">Création d'un nouveau store locator</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/forms/basic_elements.html">
+                            <span class="menu-title">Component</span>
+                            <i class="icon-puzzle menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/forms/basic_elements.html">
+                            <span class="menu-title">Configuration map</span>
+                            <i class="icon-map menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/forms/basic_elements.html">
+                            <span class="menu-title">Installation du map</span>
+                            <i class="icon-settings menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/forms/basic_elements.html">
+                            <span class="menu-title">Voir aperçu</span>
+                            <i class="icon-eye menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/icons/simple-line-icons.html">
+                            <span class="menu-title">Gestion d'API</span>
+                            <i class="icon-globe menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/forms/basic_elements.html">
+                            <span class="menu-title">Documentation</span>
+                            <i class="icon-book-open menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                            <span class="menu-title">Gestion de langue</span>
+                            <i class="icon-doc menu-icon"></i>
+                        </a>
+                        <div class="collapse" id="auth">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html">Sous dommaine configuration</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html">Gestion des traductions</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <!-- Section Galerie de Templates -->
+                    <div class="row">
+                        <div class="col-md-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Instructions pour Ajouter le Store Locator</h4>
+                                    <p>Instructions: Copiez et collez le code dans un bloc HTML de la page où vous souhaitez que le store locator apparaisse.</p>
+                                
+                                    <!-- Option 1 – Toutes les Localisations -->
+                                    <div>
+                                        <h6>Option 1 – Toutes les Localisations</h6>
+                                        <pre>
+&lt;div id='storerocket-widget' style='width:100%;' data-storerocket-env='p' data-storerocket-id='Ax86Nka8y1'&gt;
+    &lt;p style='text-align:center;font-size:13px;padding:10px;'&gt;Store locator is loading from StoreRocket 
+    &lt;a target='_blank' href='https://storerocket.io' style='font-size:13px;'&gt;Store Locator App&lt;/a&gt;..
+    &lt;/p&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    (function(){
+        var a=document.createElement('script');
+        a.type='text/javascript';
+        a.async=!0;
+        a.src='https://cdn.storerocket.io/js/widget-mb.js';
+        var b=document.getElementsByTagName('script')[0];
+        b.parentNode.insertBefore(a,b);
+    }());
+&lt;/script&gt;
+                                        </pre>
+                                        <p>Options (ajoutez les attributs à l'élément #storerocket-widget) :</p>
+                                        <ul>
+                                            <li><strong>data-storerocket-lang</strong> (optionnel; exemple: en) - force l'utilisation d'une langue spécifique.</li>
+                                            <li><strong>data-storerocket-location</strong> (optionnel; exemple: location-slug) - force le store locator à ouvrir une localisation spécifique.</li>
+                                            <li><strong>data-storerocket-enabled-filters</strong> (optionnel; exemple: 1,2,3,4) - force l'affichage de filtres spécifiques.</li>
+                                            <li><strong>data-storerocket-filters</strong> (optionnel; exemple: 1,2,3,4) - charge le store locator avec des filtres spécifiques pré-sélectionnés.</li>
+                                            <li><strong>data-storerocket-geolocation</strong> (optionnel; exemple: false) - force l'activation ou la désactivation de la géolocalisation.</li>
+                                            <li><strong>data-storerocket-mapbox-style</strong> (optionnel; seulement pour Mapbox; exemple: mapbox://styles/mapbox-user/style-id) - définit dynamiquement le style Mapbox pour la carte.</li>
+                                        </ul>
+                                    </div>
+                                
+                                    <!-- Option 2 – Localisations Pré-filtrées -->
+                                    <div>
+                                        <h6>Option 2 – Localisations Pré-filtrées</h6>
+                                        <p>Vous devez d'abord créer des filtres. Si vous souhaitez que le store locator affiche uniquement les localisations de filtres spécifiques, sélectionnez les filtres ci-dessous et copiez le code.</p>
+                                        <pre>
+&lt;div id='storerocket-widget' style='width:100%;' data-storerocket-env='p' data-storerocket-id='Ax86Nka8y1'&gt;
+    &lt;p style='text-align:center;font-size:13px;padding:10px;'&gt;Store locator is loading from StoreRocket 
+    &lt;a target='_blank' href='https://storerocket.io' style='font-size:13px;'&gt;Store Locator App&lt;/a&gt;..
+    &lt;/p&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    (function(){
+        var a=document.createElement('script');
+        a.type='text/javascript';
+        a.async=!0;
+        a.src='https://cdn.storerocket.io/js/widget-mb.js';
+        var b=document.getElementsByTagName('script')[0];
+        b.parentNode.insertBefore(a,b);
+    }());
+&lt;/script&gt;
+                                        </pre>
+                                    </div>
+                                
+                                    <!-- Option 3 – Initialisation du Widget Programmatiquement -->
+                                    <div>
+                                        <h6>Option 3 – Initialisation du Widget Programmatiquement</h6>
+                                        <p>Pour les applications à page unique qui rechargent le contenu dynamiquement, vous pouvez initialiser le widget dans votre code JavaScript.</p>
+                                        <pre>
+&lt;div class="storerocket-store-locator"&gt;&lt;/div&gt;
+
+&lt;script src="//cdn.storerocket.io/widget.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    StoreRocket.init({
+        selector: ".storerocket-store-locator",
+        account: "Ax86Nka8y1"
+    });
+&lt;/script&gt;
+                                        </pre>
+                                        <p>Options :</p>
+                                        <ul>
+                                            <li><strong>selector</strong> (requis) - Sélecteur CSS où injecter le store locator.</li>
+                                            <li><strong>account</strong> (requis) - Votre ID de compte.</li>
+                                            <li><strong>location</strong> (optionnel; exemple: location-slug) - force le store locator à ouvrir une localisation spécifique.</li>
+                                            <li><strong>tracking</strong> (optionnel; par défaut: true) - activer/désactiver le suivi des événements.</li>
+                                            <li><strong>jquery</strong> (optionnel; par défaut: true) - activer/désactiver le chargement de la version de jQuery du widget.</li>
+                                            <li><strong>lang</strong> (optionnel; exemple: en) - force l'utilisation d'une langue spécifique.</li>
+                                            <li><strong>filters</strong> (optionnel; chaîne; exemple: "100,101") - pré-sélectionne des filtres de recherche.</li>
+                                        </ul>
+                                        <p>Événements :</p>
+                                        <ul>
+                                            <li><strong>storerocket-storelocator-load</strong> - Déclenché lorsque le widget du store locator se charge.</li>
+                                            <li><strong>storerocket-storelocator-search</strong> (paramètre: query) - Déclenché lorsqu'un utilisateur effectue une recherche.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Store locator</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Mobilosoft</a> from Adr</span>
+                    </div>
+                </footer>
+            </div>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../../vendors/chart.js/Chart.min.js"></script>
+    <script src="../../vendors/moment/moment.min.js"></script>
+    <script src="../../vendors/daterangepicker/daterangepicker.js"></script>
+    <script src="../../vendors/chartist/chartist.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../../js/dashboard.js"></script>
+    <!-- End custom js for this page -->
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Initialize Leaflet Maps -->
+    <script>
+        function initMap() {
+            // Map 1
+            var map1 = L.map('map1').setView([51.505, -0.09], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map1);
+            L.marker([51.5, -0.09]).addTo(map1)
+                .bindPopup('Map 1')
+                .openPopup();
+
+            // Map 2
+            var map2 = L.map('map2').setView([48.8566, 2.3522], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map2);
+            L.marker([48.8566, 2.3522]).addTo(map2)
+                .bindPopup('Map 2')
+                .openPopup();
+
+            // Map 3
+            var map3 = L.map('map3').setView([40.7128, -74.0060], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map3);
+            L.marker([40.7128, -74.0060]).addTo(map3)
+                .bindPopup('Map 3')
+                .openPopup();
+        }
+        window.onload = initMap;
+    </script>
+</body>
+</html>

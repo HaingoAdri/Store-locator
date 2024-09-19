@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Component pour les cards</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../../vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../vendors/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../../vendors/chartist/chartist.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../images/mobilosoft_logo.svg" />
+  </head>
+  <style>
+    .map-container {
+      border-radius: 10px;
+      margin-top: 20px;
+}
+  </style>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex align-items-center">
+          <img src="../../images/mobilosoft_logo.svg" alt="logo" class="logo-dark" width="35" height="35"/>
+          <a class="nav-link text-white" href="index.html" style="font-weight: bold;">Mobilosoft Store Locator</a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
+          <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Choisier le contenue de location que vous voulez afficher</h5>
+          <ul class="navbar-nav navbar-nav-right ml-auto">
+            <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
+              <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <img class="img-xs rounded-circle ml-2" src="../../images/mobilosoft_logo.svg" alt="Profile image"> <span class="font-weight-normal">Mobilosoft </span></a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                <div class="dropdown-header text-center">
+                  <img class="img-md rounded-circle" src="../../images/mobilosoft_logo.svg" alt="Profile image" width="35" height="35">
+                  <p class="mb-1 mt-3">Mobilo</p>
+                  <p class="font-weight-light text-muted mb-0">mobilosoft@gmail.com</p>
+                </div>
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i>Mon compte</a>
+                <a class="dropdown-item"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              
+            </li>
+            <li class="nav-item nav-category">
+              <span class="nav-link">Tableau de bord</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">
+                <span class="menu-title">Tableau de bord</span>
+                <i class="icon-screen-desktop menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item nav-category"><span class="nav-link">Emplacements</span></li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Theme</span>
+                <i class="icon-layers menu-icon"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="template.html">Utiliser un template</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="editer.html">Création d'un nouveau store locator</a></li>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forms/basic_elements.html">
+                <span class="menu-title">Component</span>
+                <i class="icon-puzzle menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forms/basic_elements.html">
+                <span class="menu-title">Configuration map</span>
+                <i class="icon-map menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forms/basic_elements.html">
+                <span class="menu-title">Installation du map </span>
+                <i class="  icon-settings menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forms/basic_elements.html">
+                <span class="menu-title">Voir aperçu</span>
+                <i class="icon-eye menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/icons/simple-line-icons.html">
+                <span class="menu-title">Gestion d'API</span>
+                <i class="icon-globe menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/forms/basic_elements.html">
+                <span class="menu-title">Documentation</span>
+                <i class="icon-book-open menu-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-title">Gestion de langue</span>
+                <i class="icon-doc menu-icon"></i>
+              </a>
+              <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html">Sous dommaine configuration</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Gestion des traductions</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="main-panel">
+            <div class="content-wrapper">
+              <!-- Section Design -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                            <h4 class="card-title">Quel information voulez vous afficher ?</h4>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card" style="height: 490px;">
+                                <div class="card-header">
+                                    <h3>Aperçu des informations des points de ventes</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h3>Andoharanfotsy</h3>
+                                    <p>Location type</p>
+                                    <p>Adresse</p>
+                                    <p>Button (call to actions)</p>
+                                    <p>Site web</p>
+                                    <p>Phone</p>
+                                    <p>Social media</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Activer ce que vous voulez afficher.</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Name</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked">
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">Adress</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled">
+                                        <label class="form-check-label">Extra Adress</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                        <label class="form-check-label" >Location types</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                        <label class="form-check-label" >Filters</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                        <label class="form-check-label" >Custom fields</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                        <label class="form-check-label" >Bouton d'action</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                        <label class="form-check-label" >Site web</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                        <label class="form-check-label" >Phone</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch">
+                                        <label class="form-check-label" >Social</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-3">Enregistrer</button>
+                </div>
+            </div>
+          </div>
+        <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="../../vendors/chart.js/Chart.min.js"></script>
+    <script src="../../vendors/moment/moment.min.js"></script>
+    <script src="../../vendors/daterangepicker/daterangepicker.js"></script>
+    <script src="../../vendors/chartist/chartist.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../js/off-canvas.js"></script>
+    <script src="../../js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="../../js/dashboard.js"></script>
+    <!-- End custom js for this page -->
+  </body>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</html>
