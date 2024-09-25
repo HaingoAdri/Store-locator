@@ -673,8 +673,7 @@ h4 {
 .sticker {
     font-size: 11px;
     color: #fff;
-    background-color: #5a5b5c;
-    border-radius: 12px;
+    border-radius: 3px;
     display: inline-block;
     padding: 5px 20px;
     margin: 0 5px;
@@ -2725,7 +2724,7 @@ select.validoption {
 }
 
 .pict-preview .pined {
-    position: absolute;
+    position: absolute
     right: 10px;
     top: 10px;
     z-index: 1;
