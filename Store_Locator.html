@@ -30,7 +30,7 @@
         <link rel="shortcut icon" href="https://my.new.mobilosoft.com/img/favicon.ico"/>
         <meta name="google-site-verification" content="qzP41lOwwGJ6nyep8qwJtxHEzOvZ_ynBIpJeUHaKEgw" />
         <!-- Include GA4 and GTM tags from fragments/general.html -->
-        <style></style>
+        <style>
 
             .report-summary {
                 display: flex;
@@ -81,13 +81,13 @@
             }
 
 
-            .box ul {
+            .box1 ul {
                 list-style-type: circle; /* Type de puce */
                 margin: 1px; /* Espace autour de la liste */
                 padding: 0; /* Suppression de l'espace par défaut à l'intérieur de la liste */
             }
 
-            .box ul li {
+            .box1 ul li {
                 margin: 10px 0; /* Espacement entre les éléments de la liste */
                 font-family: Arial, sans-serif; /* Police */
                 font-size: 16px; /* Taille de la police */
@@ -96,7 +96,7 @@
                 padding-left: 20px; /* Espace à gauche pour les puces */
             }
 
-            .box ul li:before {
+            .box1 ul li:before {
                 content: '✓'; /* Symbole de la puce personnalisée */
                 position: absolute; /* Positionnement absolu */
                 left: 0; /* Alignement à gauche */
@@ -299,12 +299,21 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="box">
-                        <div class="box-inside">
-                            zerftgyhgtfred
+                <div style="display: flex;">
+                    <div class="box boxlined" style="width: 310px;">
+                        <div class="aside-left">
+                            <ul class="subNavTabs">
+                                <li><a class="btn-nav active" style="width:250px;" href="#">Utiliser un template pour la création de store</a></li>
+                                <li><a class="btn-nav" style="width:250px; margin-top: 20px;" href="#">Créer votre store locator</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box boxlined" style="margin-left: 20px; width: 1500px;">
+                        <div class="aside-left">
+                            <ul class="subNavTabs">
+                                <li><a class="btn-nav active" href="#">Utiliser un template pour la création de store</a></li>
+                                <li><a class="btn-nav" style="width:260px; margin-top: 20px;" href="#">Créer votre store locator</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
