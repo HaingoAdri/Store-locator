@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Store locator Admin</title>
+
+    <!--<link rel="stylesheet" type="text/css" th:href="@{/css/jquery-ui.css}">-->
+    <link rel="stylesheet" type="text/css" href="https://my.new.mobilosoft.com/css/components/datetime-picker.css">
+    <link rel="stylesheet" href="./global.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/global-added.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/notify.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/chosen.min.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/HoldOn.min.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/emojionearea.min.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/richtext.min.css" type="text/css">
+    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/daterangepicker.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/multi-select.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/switch.css" type="text/css">
+    <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/reporting-ui/index.css" type="text/css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--Icon -->
+    <link rel="shortcut icon" href="https://my.new.mobilosoft.com/img/favicon.ico"/>
+    <meta name="google-site-verification" content="qzP41lOwwGJ6nyep8qwJtxHEzOvZ_ynBIpJeUHaKEgw" />
+    <!-- Include GA4 and GTM tags from fragments/general.html -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script>
+        gaTrackingId = "G-E5FPWBFBPX";
+        googleTagManagerId = "GTM-K3W7C7NF";
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=gaTrackingId"></script>
+    <script>
+        /*<![CDATA[*/
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', gaTrackingId);
+
+        <!-- Google Tag Manager -->
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', googleTagManagerId);
+        <!-- End Google Tag Manager -->
+
+        // Initialize the dataLayer
+        window.dataLayer = window.dataLayer || [];
+        // Push data to the dataLayer
+        th:inline = "javascript"
+        dataLayer.push({
+            'event': 'trackingBySiteName',
+            'siteName': "demo-mobilosoft",
+        });
+        /*]]>*/
+    </script>
+    
+ 
+ <!-- Include GA4 and GTM tags from fragments/general.html -->
+ 
+    <!-- Google tag (gtag.js) -->
+    <script>
+        gaTrackingId = "G-E5FPWBFBPX";
+        googleTagManagerId = "GTM-K3W7C7NF";
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=gaTrackingId"></script>
+    <script>
+        /*<![CDATA[*/
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', gaTrackingId);
+
+        <!-- Google Tag Manager -->
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', googleTagManagerId);
+        <!-- End Google Tag Manager -->
+
+        // Initialize the dataLayer
+        window.dataLayer = window.dataLayer || [];
+        // Push data to the dataLayer
+        th:inline = "javascript"
+        dataLayer.push({
+            'event': 'trackingBySiteName',
+            'siteName': "demo-mobilosoft",
+        });
+        /*]]>*/
+    </script>
+    
+</head>
+
+<body>
+<!-- *************** -->
+<!-- ASIDE LEFT  NAV -->
+<!-- *************** -->
+<aside>
+    <nav>
+        <div class="logo"><a href="">
+            <img src="https://my.new.mobilosoft.com/img/logo.svg"/></a>
+        </div>
+        <ul>
+            <li class="nav-reporting">
+                <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- OPEN CLOSE SECTION / EXPANDABLE -->
+    <div class="expandable">
+        <div class="logoExp">
+            <a href=""><img src="https://my.new.mobilosoft.com/img/MyMobilosoft_Logo.png"/></a>
+        </div>
+        <ul>
+            <li class="nav-reporting">
+                <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+            </li>
+        </ul>
+    </div>
+    <!-- OPEN CLOSE SECTION / EXPANDABLE -->
+
+</aside>
+<!-- **************** -->
+<!-- @ASIDE LEFT  NAV -->
+<!-- **************** -->
+
+<!-- ******* -->
+<!-- HEADER -->
+<!-- ******* -->
+<header>
+
+    <ul class="breadcrumb">
+        <li><a href="#">Site</a></li>
+        <li><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/locations"><span style="font-weight: bold">demo-mobilosoft</span></a>
+        </li>
+        <li>Store locator</li>
+        
+    </ul>
+    <div class="profil" id="dv-profil">
+        
+        <div class="profil-pict">
+            
+            <img src="https://my.new.mobilosoft.com/img/no-picture-user.png"/>
+        </div>
+
+        <h4 class="profil-name wrapSpecialSelect">
+            <a class="select-type" href="#">Stagiaire Mobilosoft</a>
+            
+            <div class="selectlist">
+                <ul>
+
+                    
+
+                    <li><a href="/site/demo-mobilosoft/tasks">Tasks</a></li>
+                    <li
+                    ><a href="/profile/me/edit">Editer mon profil</a></li>
+
+
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="/site/demo-mobilosoft/locations">demo-mobilosoft</a>
+                            </li>
+                            <li>
+                                <a href="/site/mobilosoft-prod/locations">mobilosoft-prod</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul class="profil-actions">
+                <li>
+                    <a class="lock" href="/killSession">
+                        <img src="https://my.new.mobilosoft.com/img/icon-logout.png">
+                    </a>
+                </li>
+                
+            </ul>
+        </h4>
+
+    </div>
+<!--    <div th:if="${currentSite != null && (currentSite.hasCampaigns() || currentSite.hasCampaignsBeta()) && currentUser.hasAnyCampaignRight(currentSite?.id, null) && currentUser.hasWalletPermission()}"-->
+<!--         class="profil-wallet">-->
+<!--        <a th:href="@{/wallet}" class="wallet" th:text="#{wallet.my_wallet}">My Wallet</a>-->
+<!--    </div>-->
+</header>
+
+<!-- ******* -->
+<!-- @HEADER -->
+<!-- ******* -->
+
+<div>
+</div>
+
+<!-- **** -->
+<!-- MAIN -->
+<!-- **** -->
+<main>
+
+    <div class="wrapper-title">
+        <h1>Créer votre store locator </h1>
+    </div>
+    <div><div>
+    <div class="boxlined">
+        <div class="aside-left">
+            <ul class="subNavTabs">
+                <!-- <li><a class="btn-nav" th:classappend="${activeMenu == 'settingKeys'} ? 'active' : ''" th:href="@{/admin/settings/keys}">Setting Keys</a></li> -->
+                <li><a class="btn-nav active" href="/admin/clients">Tableau de bord des stores locator</a></li>
+                <li><a class="btn-nav" href="/admin/users" >Création de votre store locator</a></li>
+                <li><a class="btn-nav" href="/admin/api-users">Gestion de langue</a></li>
+                <li><a class="btn-nav" href="/admin/api-mask-templates">Guide d'utilisation</a></li>
+            </ul>
+        </div>
+    </div>
+</div></div>
+    <div class="box">
+
+        <div id="listClient"><div>
+
+    <div class="box-title">
+        <div class="aside-left">
+            <h2>Liste des clients</h2>
+        </div>
+        <div class="aside-right search-container search-display">
+            <input type="text" class="search" placeholder="Rechercher" id="search-client-name">
+            <span class="btn_search_client"><img class="btn-search btn-search-admin"></span>
+        </div>
+    </div>
+
+    <div class="box-inside">
+
+        <form id="search" action="/admin/clients/search">
+            <div class="aside-left">
+                <div><div>
+    <select id="optPageSize" name="size">
+        <option value="10" selected="selected">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select> éléments
+</div></div>
+            </div>
+            <div class="aside-right">
+                <div><div class="pagination">
+    <p>1 - 14 pages</p>
+    <ul>
+        
+        <li class="active">
+            <a href="#" page="0"><span>1</span></a>
+        </li>
+        <li>
+            <a href="#" page="1"><span>2</span></a>
+        </li>
+        <li>
+            <a href="#" page="2"><span>3</span></a>
+        </li>
+        <li>
+            <a href="#" page="3"><span>4</span></a>
+        </li>
+        <li>
+            <a href="#" page="4"><span>5</span></a>
+        </li>
+        <li>
+            <a href="#" page="5"><span>6</span></a>
+        </li>
+        <li>
+            <a href="#" page="6"><span>7</span></a>
+        </li>
+        <li>
+            <a href="#" page="7"><span>8</span></a>
+        </li>
+        <li>
+            <a href="#" page="8"><span>9</span></a>
+        </li>
+        <li>
+            <a href="#" page="9"><span>10</span></a>
+        </li>
+        <li>
+            <a href="#" page="10"><span>11</span></a>
+        </li>
+        <li>
+            <a href="#" page="11"><span>12</span></a>
+        </li>
+        <li>
+            <a href="#" page="12"><span>13</span></a>
+        </li>
+        <li>
+            <a href="#" page="13"><span>14</span></a>
+        </li>
+        <li  class="next">
+            <a href="#" page="1"><span>Suivant</span></a>
+        </li>
+    </ul>
+</div></div>
+            </div>
+        </form>
+        <table class="table" id="tb-clients">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Utilisateur</th>
+                <th>Sites</th>
+                <td class="actions"><a href="/admin/clients/new" class="btn">Ajouter</a>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td class="clickableRow" data-tagID="8e58ca9c-c782-44d6-b049-a8257c31e672"><strong><label>columbuscafe-fr</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="8e58ca9c-c782-44d6-b049-a8257c31e672">Colombus Café &amp; Co </td>
+                <td class="clickableRow clickableUser" data-tagExternalId="columbuscafe-fr">206</td>
+                <td class="clickableRow" data-tagID="8e58ca9c-c782-44d6-b049-a8257c31e672">
+                    <span class="sticker">columbuscafe-fr </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/8e58ca9c-c782-44d6-b049-a8257c31e672/edit">Modifier</a>
+                            <a href="/admin/clients/8e58ca9c-c782-44d6-b049-a8257c31e672/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/8e58ca9c-c782-44d6-b049-a8257c31e672/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="5220d8c6-bb4a-48db-bcb5-576e1804f70c"><strong><label>BNP Paribas Fortis Belgium</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="5220d8c6-bb4a-48db-bcb5-576e1804f70c">BNP Paribas Fortis Belgium</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="BNP Paribas Fortis Belgium">11</td>
+                <td class="clickableRow" data-tagID="5220d8c6-bb4a-48db-bcb5-576e1804f70c">
+                    <span class="sticker">fortis-be </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/5220d8c6-bb4a-48db-bcb5-576e1804f70c/edit">Modifier</a>
+                            <a href="/admin/clients/5220d8c6-bb4a-48db-bcb5-576e1804f70c/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/5220d8c6-bb4a-48db-bcb5-576e1804f70c/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="7de8677a-ba90-4ece-b92d-a4d61372c4d7"><strong><label>Flunch</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="7de8677a-ba90-4ece-b92d-a4d61372c4d7">flunch-fr</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="Flunch">9</td>
+                <td class="clickableRow" data-tagID="7de8677a-ba90-4ece-b92d-a4d61372c4d7">
+                    <span class="sticker">flunch-fr </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/7de8677a-ba90-4ece-b92d-a4d61372c4d7/edit">Modifier</a>
+                            <a href="/admin/clients/7de8677a-ba90-4ece-b92d-a4d61372c4d7/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/7de8677a-ba90-4ece-b92d-a4d61372c4d7/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="a4025007-01f6-46ef-8687-4bb7581f9612"><strong><label>les3brasseurs-fr</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="a4025007-01f6-46ef-8687-4bb7581f9612">3 Brasseurs</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="les3brasseurs-fr">26</td>
+                <td class="clickableRow" data-tagID="a4025007-01f6-46ef-8687-4bb7581f9612">
+                    <span class="sticker">les3brasseurs-fr </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/a4025007-01f6-46ef-8687-4bb7581f9612/edit">Modifier</a>
+                            <a href="/admin/clients/a4025007-01f6-46ef-8687-4bb7581f9612/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/a4025007-01f6-46ef-8687-4bb7581f9612/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="4d260ec8-f913-42f3-a8d7-826b6c9b197f"><strong><label>Betfirst</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="4d260ec8-f913-42f3-a8d7-826b6c9b197f">Betfirst</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="Betfirst">2</td>
+                <td class="clickableRow" data-tagID="4d260ec8-f913-42f3-a8d7-826b6c9b197f">
+                    <span class="sticker">betfirst-be </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/4d260ec8-f913-42f3-a8d7-826b6c9b197f/edit">Modifier</a>
+                            <a href="/admin/clients/4d260ec8-f913-42f3-a8d7-826b6c9b197f/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/4d260ec8-f913-42f3-a8d7-826b6c9b197f/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="61812e59-5573-4e5a-a2da-fa8793f4c077"><strong><label>covid-solidarity</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="61812e59-5573-4e5a-a2da-fa8793f4c077">covid-solidarity</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="covid-solidarity">2</td>
+                <td class="clickableRow" data-tagID="61812e59-5573-4e5a-a2da-fa8793f4c077">
+                    <span class="sticker">covid-solidarity </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/61812e59-5573-4e5a-a2da-fa8793f4c077/edit">Modifier</a>
+                            <a href="/admin/clients/61812e59-5573-4e5a-a2da-fa8793f4c077/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/61812e59-5573-4e5a-a2da-fa8793f4c077/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="7c90e45c-a204-4e4a-82ed-1c1359b1aa04"><strong><label>hyundai</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="7c90e45c-a204-4e4a-82ed-1c1359b1aa04">Hyundai Belgium</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="hyundai">0</td>
+                <td class="clickableRow" data-tagID="7c90e45c-a204-4e4a-82ed-1c1359b1aa04">
+                    
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/7c90e45c-a204-4e4a-82ed-1c1359b1aa04/edit">Modifier</a>
+                            <a href="/admin/clients/7c90e45c-a204-4e4a-82ed-1c1359b1aa04/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/7c90e45c-a204-4e4a-82ed-1c1359b1aa04/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="284fa149-627d-4441-9398-f3835338542a"><strong><label>ING-be</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="284fa149-627d-4441-9398-f3835338542a">ING Belgium</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="ING-be">21</td>
+                <td class="clickableRow" data-tagID="284fa149-627d-4441-9398-f3835338542a">
+                    <span class="sticker">ing-be </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/284fa149-627d-4441-9398-f3835338542a/edit">Modifier</a>
+                            <a href="/admin/clients/284fa149-627d-4441-9398-f3835338542a/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/284fa149-627d-4441-9398-f3835338542a/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="10f6c4f4-fa03-447e-9c28-6dc37a809c4a"><strong><label>carrefour-be</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="10f6c4f4-fa03-447e-9c28-6dc37a809c4a">Carrefour</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="carrefour-be">13</td>
+                <td class="clickableRow" data-tagID="10f6c4f4-fa03-447e-9c28-6dc37a809c4a">
+                    <span class="sticker">carrefour-be </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/10f6c4f4-fa03-447e-9c28-6dc37a809c4a/edit">Modifier</a>
+                            <a href="/admin/clients/10f6c4f4-fa03-447e-9c28-6dc37a809c4a/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/10f6c4f4-fa03-447e-9c28-6dc37a809c4a/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="clickableRow" data-tagID="8d9231da-c2ea-4ab3-a36d-8210226576cc"><strong><label>mcdonalds-fr</label></strong>
+                </td>
+                <td class="clickableRow" data-tagID="8d9231da-c2ea-4ab3-a36d-8210226576cc">McDonald&#39;s France</td>
+                <td class="clickableRow clickableUser" data-tagExternalId="mcdonalds-fr">6</td>
+                <td class="clickableRow" data-tagID="8d9231da-c2ea-4ab3-a36d-8210226576cc">
+                    <span class="sticker">mcdonalds-fr </span>
+                </td>
+                <td class="actions">
+                    <div class="dropdown">
+                        <button class="dropbtn">Actions</button>
+                        <div class="dropdown-content">
+                            <a href="/admin/clients/8d9231da-c2ea-4ab3-a36d-8210226576cc/edit">Modifier</a>
+                            <a href="/admin/clients/8d9231da-c2ea-4ab3-a36d-8210226576cc/delete" class="delete-client">Supprimer</a>
+                            <a href="/admin/clients/8d9231da-c2ea-4ab3-a36d-8210226576cc/client" class="see-client">Voir le client</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div></div>
+    </div>
+
+    <div class="popupWrap" id="popDeleteClient">
+        <div class="insidePopup">
+            <h2>Confirmation de suppression</h2>
+            <p>Ce client va être supprimé. Voulez-vous continuer ?</p>
+            <div class="wrapSubmit">
+                <a class="btn" href="#" id="popDeleteClientYes">Oui</a>
+                <a class="btn" href="#" id="popDeleteClientNo">Non</a>
+            </div>
+            <a class="closepopup" href="#">ClosePopup</a>
+        </div>
+    </div>
+</main>
+
+<!-- **** -->
+<!-- @MAIN -->
+<!-- **** -->
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/cloudinary-jquery.js"></script>
+
+<script src="/js/notify.js"></script>
+<script src="/js/moment.min.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script src="/js/daterangepicker.min.js"></script>
+<script src="/js/global.js"></script>
+<script src="/js/global-added.js"></script>
+<script src="/js/HoldOn.min.js"></script>
+<script src="/js/chosen.jquery.min.js"></script>
+<script src="/js/emojionearea.min.js"></script>
+<script src="/js/jquery.richtext.min.js"></script>
+<script src="/js/jquery.multi-select.min.js"></script>
+<script src="/js/switch.js"></script>
+
+<!--block for custom js page-->
+<script>
+    let lang = "fr";
+    let unauthorizedAction = "Non autoris\u00E9";
+    let localeLabel = {
+        "customRangeLabel": "P\u00E9riode personnalis\u00E9e",
+        "applyLabel": "Appliquer",
+        "cancelLabel": "Annuler"
+    };
+    moment.locale(lang);
+    let rangesDatePicker = {
+        "Aujourd'hui": [moment(), moment()],
+        "Hier": [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        "Les 7 derniers jours": [moment().subtract(6, 'days'), moment()],
+        "Les 30 derniers jours": [moment().subtract(29, 'days'), moment()],
+        "Ce mois": [moment().startOf('month'), moment().endOf('month')],
+        "Le mois dernier": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+    };
+
+    let rangeReporting = {
+        "Les 7 derniers jours": [moment().subtract(6, 'days'), moment()],
+        "Les 30 derniers jours": [moment().subtract(29, 'days'), moment()],
+        "Ce mois": [moment().startOf('month'), moment().endOf('month')],
+        "Le mois dernier": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+        "Cette ann\u00E9e": [moment().startOf('year'), moment().endOf('year')],
+        "L'ann\u00E9e derni\u00E8re": [moment().subtract(1, 'year').startOf('year'), moment().subtract(1, 'year').endOf('year')]
+    };
+</script>
+
+
+    <script src="/js/sticker-site.js"></script>
+    <script>
+        let modalId = "#popDeleteClient";
+        let modal = $(document).find(modalId);
+        let redirectUrl = "/admin/clients";
+        let msg = "Client deleted";
+        let siteName = "demo-mobilosoft";
+        $(document).ready(function () {
+
+            $(document).on('click', '.see-client', function (event) {
+                event.preventDefault();
+                var url = $(this).attr('href');
+                console.log(url);
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    success: function (data) {
+                        document.location.href = url;
+                    }, error: function (error) {
+                        notifError("You don't have access to this client")
+                    }
+                });
+            });
+            let showUsers = function () {
+                $('.clickableRow').click(function () {
+                    let clientExternalId = $(this).attr('data-tagExternalId');
+                    if (clientExternalId) {
+                        let clientUsersUrl = '/admin/users/client/' + clientExternalId;
+                        window.location = clientUsersUrl;
+                    }
+                });
+            };
+            let pagination = function () {
+                $('.pagination').find('a').click(function (event) {
+                    event.preventDefault();
+                    var page = $(this).attr('page');
+                    searchAction(page);
+                })
+            };
+            let deleteClient = function () {
+                $(document).on('click', '.delete-client', function (event) {
+                    event.preventDefault();
+                    var url = $(this).attr('href');
+                    $(document).find('#popDeleteClientYes').attr("href", url);
+                    modal.addClass('visible');
+                });
+            }
+            let searchAction = function (page) {
+                var form = $('#search');
+                var clientName = $("#search-client-name").val();
+                var pageSize = $("#optPageSize").val();
+                $.ajax({
+                    url: form.attr('action'),
+                    data: form.serialize() + '&page=' + page + '&size=' + pageSize + '&clientName=' + clientName,
+                    type: 'GET',
+                    success: function (result) {
+                        $("#listClient").html(result);
+                        $("#search-client-name").val(clientName);
+                        pagination();
+                        deleteClient();
+                        changeSize();
+                        showUsers();
+                    }, error: function (jqXHR, textStatus, errorThrown) {
+                    }
+                })
+            };
+            let changeSize = function () {
+                $("#optPageSize").change(function (event) {
+                    event.preventDefault();
+                    var page = $(this).attr('page');
+                    searchAction(page);
+                });
+            };
+            let changeTxtFind = function () {
+                $(document).on('keypress', '#search-client-name', function (event) {
+                    if (event.which == 13) {
+                        var page = $(this).attr('page');
+                        searchAction(page);
+                    }
+                });
+                $(document).on('click', '.btn_search_client', function (event) {
+                        var page = $(this).attr('page');
+                        searchAction(page);
+                });
+            };
+            pagination();
+            showUsers();
+            deleteClient();
+            changeSize();
+            changeTxtFind();
+
+        });
+    </script>
+    <script src="/js/modal_confirmation.js"></script>
+
+
+
+
+<!-- Intercom -->
+<script>
+    let userName = 'Stagiaire Mobilosoft';
+    let userMail = 'stagiaire.mobilosoft@gmail.com';
+    let language = 'fr';
+
+    window.intercomSettings = {
+        app_id: "qa74k9j4",
+        name: userName,
+        email: userMail,
+        language_override: language
+    };
+</script>
+<script >(function () {
+    var w = window;
+    var ic = w.Intercom;
+    if (typeof ic === "function") {
+        ic('reattach_activator');
+        ic('update', intercomSettings);
+    } else {
+        var d = document;
+        var i = function () {
+            i.c(arguments)
+        };
+        i.q = [];
+        i.c = function (args) {
+            i.q.push(args)
+        };
+        w.Intercom = i;
+
+        function l() {
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://widget.intercom.io/widget/qa74k9j4';
+            var x = d.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+
+        if (w.attachEvent) {
+            w.attachEvent('onload', l);
+        } else {
+            w.addEventListener('load', l, false);
+        }
+    }
+})()</script>
+<!-- / Intercom -->
+
+</body>
+</html>
