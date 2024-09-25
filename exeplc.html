@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Summary</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .report-summary {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .report-item {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .report-item h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .report-item .amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .report-item .icon {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .icon-interaction { background-color: #35d071; }
+        .icon-search { background-color: #f85151; }
+        .icon-establishment { background-color: #f9d77e; }
+
+        .report-item a {
+            color: #8a43f8;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="report-summary">
+        <div class="report-item">
+            <h3>INTERACTIONS</h3>
+            <p class="amount">12,345</p>
+            <div class="icon icon-interaction">
+                💬
+            </div>
+            <a href="#">2 Reports</a>
+        </div>
+
+        <div class="report-item">
+            <h3>SEARCHES</h3>
+            <p class="amount">45,678</p>
+            <div class="icon icon-search">
+                🔍
+            </div>
+            <a href="#">3 Reports</a>
+        </div>
+
+        <div class="report-item">
+            <h3>ESTABLISHMENTS</h3>
+            <p class="amount">1,234</p>
+            <div class="icon icon-establishment">
+                🏢
+            </div>
+            <a href="#">5 Reports</a>
+        </div>
+    </div>
+
+</body>
+</html>
