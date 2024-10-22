@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Header avec Breadcrumb et Carte</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Inclure Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Inclure Leaflet-Control-Geocoder CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+    <style>
+        body {
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .custom-header {
+            padding: 0px 0px;
+        }
+
+        .custom-header a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+
+        .search-bar {
+            margin-bottom: 15px;
+        }
+
+        .custom-list-spacing .list-group-item {
+            margin-bottom: 10px;
+            
+        }
+
+        .list-group-item a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <main class="m-5">
+        <header class="custom-header py-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item">
+                        <a href="#">
+                            <i class="fas fa-home" style="margin-right: 5px;"></i> Accueil
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" aria-current="page">
+                        <a href="#" class="text-primary">Magasins</a>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+
+        <!-- Barre de recherche Bootstrap -->
+        <section class="search-bar">
+            <div class="input-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Rechercher un lieu..." aria-label="Rechercher un lieu" aria-describedby="button-addon2">
+                <button class="btn btn-primary" type="button" id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Carte Leaflet -->
+        <section>
+            <div class="row">
+                <div class="col-12">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section de magasin liste  -->
+         <section>
+            <div class="text-center">
+                <h4 class="fw-bold py-3 text-primary"><span style="padding-right: 5px;">Tous vos magasins </span> <i class="fa-solid fa-chevron-down" style="margin-bottom: 2%; font-size: 25px;"></i></h4>
+            </div>
+            <div class="row">
+                <h4>Par région</h4>
+                <div class="col-3">
+                    <ul class="list-group list-group-flush custom-list-spacing">
+                        <li class="list-group-item"><a href="Store.html">Analamanga</a></li>
+                        <li class="list-group-item"><a href="#">Vakinankaratra</a></li>
+                        <li class="list-group-item"><a href="#">Itasy</a></li>
+                        <li class="list-group-item"><a href="#">Bongolava</a></li>
+                        <li class="list-group-item"><a href="#">Alaotra-Mangoro</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="list-group list-group-flush custom-list-spacing">
+                        <li class="list-group-item"><a href="#">Anosy</a></li>
+                        <li class="list-group-item"><a href="#">Androy</a></li>
+                        <li class="list-group-item"><a href="#">Atsimo-Andrefana</a></li>
+                        <li class="list-group-item"><a href="#">Menabe</a></li>
+                        <li class="list-group-item"><a href="#">Melaky</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="list-group list-group-flush custom-list-spacing">
+                        <li class="list-group-item"><a href="#">Sava</a></li>
+                        <li class="list-group-item"><a href="#">Diana</a></li>
+                        <li class="list-group-item"><a href="#">Boeny</a></li>
+                        <li class="list-group-item"><a href="#">Sofia</a></li>
+                        <li class="list-group-item"><a href="#">Betsiboka</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="list-group list-group-flush custom-list-spacing">
+                        <li class="list-group-item"><a href="#">Vatovavy</a></li>
+                        <li class="list-group-item"><a href="#">Fitovinany</a></li>
+                        <li class="list-group-item"><a href="#">Atsinanana</a></li>
+                        <li class="list-group-item"><a href="#">Haute Matsiatra</a></li>
+                        <li class="list-group-item"><a href="#">Ihorombe</a></li>
+                    </ul>
+                </div>
+            </div>
+         </section>
+    </main>
+
+    <!-- Inclure Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Inclure Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Inclure Leaflet-Control-Geocoder JS -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+    <script>
+        // Initialiser la carte
+        var map = L.map('map').setView([46.3418, 2.6036], 8);
+
+        // Ajouter les tuiles OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Ajouter un marqueur initial sur Allier
+        var marker = L.marker([46.3418, 2.6036]).addTo(map)
+            .bindPopup('<b>Allier</b><br>Ceci est une description.')
+            .openPopup();
+
+        // Ajouter la fonction de recherche de Leaflet (Leaflet-Control-Geocoder)
+        var geocoder = L.Control.geocoder({
+            defaultMarkGeocode: true
+        }).addTo(map);
+
+        // Fonction pour déclencher la recherche depuis le champ de recherche Bootstrap
+        function searchLocation(query) {
+            geocoder.options.geocoder.geocode(query, function(results) {
+                if (results.length === 0) {
+                    alert('Aucun résultat trouvé.');
+                    return;
+                }
+
+                var result = results[0];
+                if (result && result.center) {
+                    // Centrer la carte sur le résultat trouvé
+                    map.setView(result.center, 13);
+                    
+                    // Ajouter un marqueur sur le résultat
+                    L.marker(result.center).addTo(map)
+                        .bindPopup(result.name || query)
+                        .openPopup();
+                }
+            });
+        }
+
+        // Déclenche la recherche lorsque l'utilisateur clique sur le bouton
+        document.getElementById('searchButton').addEventListener('click', function() {
+            var query = document.getElementById('searchInput').value;
+            if (query) {
+                searchLocation(query);
+            }
+        });
+        document.getElementById('searchInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                var query = document.getElementById('searchInput').value;
+                if (query) {
+                    searchLocation(query);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
