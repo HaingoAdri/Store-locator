@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>My Mobilosoft Locations</title>
+
+    <!--<link rel="stylesheet" type="text/css" th:href="@{/css/jquery-ui.css}">-->
+    <link rel="stylesheet" type="text/css" href="/css/components/datetime-picker.css">
+    <link rel="stylesheet" href="/css/global.css" type="text/css">
+    <link rel="stylesheet" href="/css/global-added.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="/css/notify.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/css/chosen.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/HoldOn.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/emojionearea.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/richtext.min.css" type="text/css">
+    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="/css/daterangepicker.css" type="text/css">
+    <link rel="stylesheet" href="/css/multi-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/switch.css" type="text/css">
+    <link rel="stylesheet" href="/css/reporting-ui/index.css" type="text/css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--Icon -->
+    <link rel="shortcut icon" href="/img/favicon.ico"/>
+    <meta name="google-site-verification" content="qzP41lOwwGJ6nyep8qwJtxHEzOvZ_ynBIpJeUHaKEgw" />
+    
+</head>
+
+<body>
+    <aside>
+        <nav>
+            <div class="logo"><a href="">
+                <img src="https://my.new.mobilosoft.com/img/logo.svg"/></a>
+            </div>
+            <ul>
+                <li class="nav-client">
+                    <a href="./Page.html">Tableau de bord</a>
+                </li>
+                <li class="nav-settings">
+                    <a href="./index.html">Ajout d'emplacement</a>
+                </li>
+                <li class="nav-reporting">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+                </li>
+                <li class="nav-status">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a>
+                </li>
+                <li class="nav-inbox">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des seo</a>
+                </li>
+                
+            </ul>
+        </nav>
+        <!-- OPEN CLOSE SECTION / EXPANDABLE -->
+        <div class="expandable">
+            <div class="logoExp">
+                <a href=""><img src="https://my.new.mobilosoft.com/img/MyMobilosoft_Logo.png"/></a>
+            </div>
+            <ul>
+                <li class="nav-client">
+                    <a href="./Page.html">Tableau de bord</a>
+                </li>
+                <li class="nav-settings">
+                    <a href="./index.html">Ajout d'emplacement</a>
+                </li>
+                <li class="nav-reporting">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+                </li>
+                <li class="nav-status">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a>
+                </li>
+                <li class="nav-inbox">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des seo</a>
+                </li>
+            </ul>
+        </div>
+        <!-- OPEN CLOSE SECTION / EXPANDABLE -->
+
+    </aside>
+    <header>
+        <ul class="breadcrumb">
+            <li><a href="#">Site</a></li>
+            <li><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/locations"><span style="font-weight: bold">demo-mobilosoft</span></a>
+            </li>
+            <li>Store locator</li>
+            
+        </ul>
+        <div class="profil" id="dv-profil">
+            
+            <div class="profil-pict">
+                
+                <img src="https://my.new.mobilosoft.com/img/no-picture-user.png"/>
+            </div>
+
+            <h4 class="profil-name wrapSpecialSelect">
+                <a class="select-type" href="#">Stagiaire Mobilosoft</a>
+                
+                <div class="selectlist">
+                    <ul>
+                        <li><a href="/site/demo-mobilosoft/tasks">Tasks</a></li>
+                        <li
+                        ><a href="/profile/me/edit">Editer mon profil</a></li>
+
+
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="/site/demo-mobilosoft/locations">demo-mobilosoft</a>
+                                </li>
+                                <li>
+                                    <a href="/site/mobilosoft-prod/locations">mobilosoft-prod</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="profil-actions">
+                    <li>
+                        <a class="lock" href="/killSession">
+                            <img src="https://my.new.mobilosoft.com/img/icon-logout.png">
+                        </a>
+                    </li>
+                    
+                </ul>
+            </h4>
+        </div>
+    </header>
+    <main>
+        <div class="notification"></div>
+        <!-- Title of the page -->
+        <div class="wrapper-title">
+            
+            <h1>Nouveau point de vente</h1>
+        </div>
+        
+        <!-- @Title of the page -->
+
+        <!-- ******* SUBNAV ******* -->
+        <div><div>
+        
+
+    </div></div>
+        <!-- ******* @SUBNAV ******* -->
+
+        
+        <div class="box">
+            <div class="box-title">
+                <h2>Informations</h2>
+            </div>
+            <div class="box-inside">
+                <form class="form" id="frm-infos-location"
+                    method="post"
+                    action="/site/mcdonalds-fr/locations/new-location">
+                    <div><div>
+        
+            <div class="row">
+                <div class="col">
+                    <div class="wrap-label">
+                        <label>
+                            <span><strong style="color: red;">* </strong></span>
+                            <span>Nom du point de vente</span>
+                        </label>
+                    </div>
+                    <input class="field" data-type="text" id="storeName"
+                        type="text"
+                        data-msg-error="Ce champs est obligatoire" name="location.name" value="">
+                    <div class="error-storeName"></div>
+                </div>
+                <div class="col">
+                    <label>
+                        <span style="color: red"><strong>* </strong></span>
+                        <span>Slug</span>
+                        <span><span>Identifiant pour reconnaitre un point de vente</span></span>
+                    </label>
+                    <input class="field" data-type="text" id="externalId"
+                        type="text"
+                        data-msg-error="Ce champs est obligatoire" name="location.externalId" value="">
+                    <div class="error-externalId"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>
+                        <span>Marque</span>
+                    </label>
+                    <div class="select">
+                        <select id="brand" name="location.brand.id">
+                            <option value="c2bd2315-e825-48a4-b941-d7033cdcc9d9">McDonald&#39;s</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <label>
+                        <span>Téléphone</span>
+                    </label>
+                    <input id="slug" type="text" name="location.slug" value="">
+                </div>
+            </div>
+            <div class="row" style="display: none">
+                <div class="col">
+                    <label>Identifiant du point de vente</label>
+                    <input class="highlighted" id="locationID" readonly type="text" name="location.id" value="">
+                </div>
+                <div class="col">
+                    <label>Site ID</label>
+                    <input class="highlighted" id="siteID" readonly type="text" name="location.siteId" value="65106e34-e2f3-4594-93b7-8ae650398266">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" >
+                    <label>Langue principale</label>
+                    <div class="select">
+                        <select id="lng_principal" name="location.language">
+                            <option value="FRENCH">Français</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col">
+                    <label>Autre numéro</label>
+                    <input id="phone" type="text" name="location.contact.phone" value="">
+                    <!--class="field" data-type="phone"  th:attr="data-msg-error=#{v_phone}">-->
+                    <div class="error-phone"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label>Site Web</label>
+                    <input class="field" data-required="false" data-type="url" id="url"
+                        type="text"
+                        data-msg-error="Veuillez entrer un url valide" name="location.contact.url" value="">
+                    <div class="error-url"></div>
+                </div>
+                <div class="col">
+                    <label>
+                        <span>Adresse email</span>
+                    </label>
+                    <input id="mail" data-required="false" type="text"
+                        data-type="email" class="field" data-msg-error="Veuillez entrer une adresse valide" name="location.contact.email" value="">
+                    <div class="error-mail"></div>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col" id="status_btn_group">
+                    <label>Pour le moment le point de vente est</label>
+                    <div class="btn-group btn-group-full">
+                        <button class="toggle status active" data-status="OPEN" id="OPEN" type="button">Ouvert</button>
+                        <button class="toggle status" data-status="OPEN_SOON" id="OPEN_SOON" type="button">Ouverture prochaine</button>
+                        
+                        <button class="toggle status" data-status="CLOSED" id="CLOSED" type="button">Fermé</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="div-opendate" style="display: none;">
+                    <label id="opDate">Ouverture le</label>
+                    <input class="field" id="input-date-open" value=""
+                        placeholder="yyyy-MM-dd"
+                        type="date" data-type="date" data-msg-error="La date doit être supérieure à celle d&#39;aujourd&#39;hui" name="location.openingDate">
+                    <div class="error-input-date-open"></div>
+                </div>
+                <div class="col" id="div-closeDate" style="display: none;">
+                    <label id="clDate">Fermeture le</label>
+                    <input id="input-date-closed" value=""
+                        placeholder="yyyy-MM-dd" type="date" name="location.closingDate">
+                </div>
+            </div>
+            
+            <div class="wrapSubmit">
+                <button class="btn send" id="btn-send-infos-location" type="button" >Enregistrer</button>
+            </div>
+
+            <div class="popupWrap" id="popInfoGoogleName">
+                <div class="insidePopup">
+                    <div class="post-google post-preview">
+                        <div class="post-container">
+                            <div class="post-channel">
+                                Google
+                            </div>
+                            <div class="post">
+                                <div class="post-content">
+                                    <div class="post-desc">
+                                        <div class="post-text">
+                                            <p>According to Google's guidelines, your name should reflect your business'
+                                                real-world name,
+                                                as used consistently on your storefront. Example: listing for coffee shop in
+                                                San Francisco called Shelly’s Coffee.</p>
+                                            <p> - Acceptable Business name for GMB : Shelly’s Coffee</p>
+                                            <p> - Non Acceptable Business name for GMB : Shelly’s Coffee San Fransisco</p>
+                                            <p>More information here:<a
+                                                    href="https://support.google.com/business/answer/3038177?hl=en"
+                                                    target="_blank">Learn more</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="closepopup" href="#">ClosePopup</a>
+                </div>
+            </div>
+        
+    </div></div>
+                </form>
+            </div>
+        </div>
+        
+
+        
+
+        
+        <!-- BOX -->
+        
+        <!--   @BOX -->
+    </main>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/datatables.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/cloudinary-jquery.js"></script>
+    <script src="/js/notify.js"></script>
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/moment-with-locales.js"></script>
+    <script src="/js/daterangepicker.min.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/global-added.js"></script>
+    <script src="/js/HoldOn.min.js"></script>
+    <script src="/js/chosen.jquery.min.js"></script>
+    <script src="/js/emojionearea.min.js"></script>
+    <script src="/js/jquery.richtext.min.js"></script>
+    <script src="/js/jquery.multi-select.min.js"></script>
+    <script src="/js/switch.js"></script>
+    <script src="/js/jquery-geocomplete.js"></script>
+    <script src="/js/location.js"></script>
+</body>
+</html>

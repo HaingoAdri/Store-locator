@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Produits - Mobilosoft</title>
+    <link rel="stylesheet" type="text/css" href="/css/components/datetime-picker.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/global-added.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/notify.css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/chosen.min.css">
+    <link rel="stylesheet" href="/css/HoldOn.min.css">
+    <link rel="stylesheet" href="/css/emojionearea.min.css">
+    <link rel="stylesheet" href="/css/richtext.min.css">
+    <link rel="stylesheet" href="/css/daterangepicker.css">
+    <link rel="stylesheet" href="/css/multi-select.css">
+    <link rel="stylesheet" href="/css/switch.css">
+    <link rel="stylesheet" href="/css/reporting-ui/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.ico"/>
+    <meta name="google-site-verification" content="qzP41lOwwGJ6nyep8qwJtxHEzOvZ_ynBIpJeUHaKEgw" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=gaTrackingId"></script>
+</head>
+
+<body>
+    <aside>
+        <nav>
+            <div class="logo">
+                <a href=""><img src="https://my.new.mobilosoft.com/img/logo.svg" alt="Mobilosoft Logo"/></a>
+            </div>
+            <ul>
+                <li class="nav-client"><a href="./Page.html">Tableau de bord</a></li>
+                <li class="nav-settings"><a href="./index.html">Ajout d'emplacement</a></li>
+                <li class="nav-reporting"><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a></li>
+                <li class="nav-status"><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a></li>
+                <li class="nav-inbox"><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des SEO</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <header>
+        <ul class="breadcrumb">
+            <li><a href="#">Site</a></li>
+            <li><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/locations"><strong>demo-mobilosoft</strong></a></li>
+            <li>A9 MONTPELLIER AMBRUSSUM [ 1297 ]</li>
+            <li>Produits</li>
+        </ul>
+        <div class="profil" id="dv-profil">
+            <div class="profil-pict">
+                <img src="https://my.new.mobilosoft.com/img/no-picture-user.png" alt="Profil User"/>
+            </div>
+            <h4 class="profil-name wrapSpecialSelect">
+                <a class="select-type" href="#">Stagiaire Mobilosoft</a>
+            </h4>
+        </div>
+    </header>
+
+    <main>
+        <div class="wrapper-title">
+            <h1>Gestion de disponibilités de produits</h1>
+            <div class="btns-group">
+                <button id="btn-add-product" class="btn btn-level2" data-toggle="modal" data-target="#addProductModal">
+                    Ajouter un Produit
+                </button>
+            </div>
+        </div>
+        <div>
+            <div class="boxlined">
+                <div class="aside-left">
+                    <ul class="subNavTabs">
+                        <li><a class="btn-nav" href="./modif.html">Informations</a></li>
+                        <li><a class="btn-nav" href="./horaire.html">Heures d&#39;ouverture</a></li>
+                        <li><a class="btn-nav" href="./image.html">Images</a></li>
+                        <li><a class="btn-nav" href="./services.html">Services</a></li>
+                        <li><a class="btn-nav active" href="./produit.html">Stock de produits</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-title">
+                <h2>Produits</h2>
+            </div>
+            <div class="box-inside">
+                <table class="table" id="tb-products">
+                    <thead>
+                        <tr>
+                            <th>Nom du Produit</th>
+                            <th>Description</th>
+                            <th>Quantité</th>
+                            <th>Prix</th>
+                            <th>Remise</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chocolat Milka</td>
+                            <td>Tablette de chocolat au lait 100g</td>
+                            <td>20</td>
+                            <td>1.50€</td>
+                            <td>0%</td>
+                            <td>2024-10-01</td>
+                            <td>
+                                <button class="btn btn-edit">Éditer</button>
+                                <button class="btn btn-delete">Supprimer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lessive Ariel</td>
+                            <td>Lessive liquide 1.5L</td>
+                            <td>15</td>
+                            <td>5.99€</td>
+                            <td>10%</td>
+                            <td>2024-09-20</td>
+                            <td>
+                                <button class="btn btn-edit">Éditer</button>
+                                <button class="btn btn-delete">Supprimer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pâtes Barilla</td>
+                            <td>Pâtes spaghetti 500g</td>
+                            <td>30</td>
+                            <td>1.20€</td>
+                            <td>5%</td>
+                            <td>2024-10-05</td>
+                            <td>
+                                <button class="btn btn-edit">Éditer</button>
+                                <button class="btn btn-delete">Supprimer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Café Jacobs</td>
+                            <td>Café moulu 250g</td>
+                            <td>12</td>
+                            <td>3.50€</td>
+                            <td>15%</td>
+                            <td>2024-09-30</td>
+                            <td>
+                                <button class="btn btn-edit">Éditer</button>
+                                <button class="btn btn-delete">Supprimer</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Eau minérale Carrefour</td>
+                            <td>Bouteille d'eau 1.5L</td>
+                            <td>50</td>
+                            <td>0.50€</td>
+                            <td>0%</td>
+                            <td>2024-10-10</td>
+                            <td>
+                                <button class="btn btn-edit">Éditer</button>
+                                <button class="btn btn-delete">Supprimer</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Ajouter un Produit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-product-form">
+                        <div class="form-group">
+                            <label for="product-name">Nom du Produit</label>
+                            <input type="text" class="form-control" id="product-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-description">Description</label>
+                            <input type="text" class="form-control" id="product-description" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-quantity">Quantité</label>
+                            <input type="number" class="form-control" id="product-quantity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-price">Prix</label>
+                            <input type="number" class="form-control" id="product-price" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-discount">Remise (%)</label>
+                            <input type="number" class="form-control" id="product-discount" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-date">Date</label>
+                            <input type="date" class="form-control" id="product-date" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Ajouter Produit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); }
+        .modal-content { background-color: white; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 30%; box-shadow: 0px 4px 10px rgba(0,0,0,0.2); }
+        .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
+        .close:hover, .close:focus { color: black; text-decoration: none; cursor: pointer; }
+        .modal-actions { margin-top: 20px; display: flex; justify-content: space-between; }
+
+        /* Style pour les éléments select */
+        .select-custom {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #c3c3c3; /* Couleur de bordure */
+            border-radius: 5px; /* Coins arrondis */
+            background-color: #f9f9f9; /* Couleur de fond */
+            appearance: none; /* Supprimer le style par défaut du select */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><polygon points="0,0 20,0 10,10" fill="%23033e74"/></svg>'); /* Flèche personnalisée */
+            background-repeat: no-repeat;
+            background-position: right 10px center; /* Position de la flèche */
+        }
+
+        /* Style pour les éléments input file */
+        input[type="file"] {
+            display: none; /* Masquer le champ de fichier par défaut */
+        }
+
+        .custom-file-upload {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #c3c3c3; /* Couleur de bordure */
+            border-radius: 5px; /* Coins arrondis */
+            background-color: #f9f9f9; /* Couleur de fond */
+            cursor: pointer; /* Curseur pointer pour indiquer que c'est cliquable */
+            color: #c3c3c3; /* Couleur du texte */
+        }
+
+        /* Ajout de styles lors du survol */
+        .custom-file-upload:hover {
+            background-color: #e0e0e0; /* Couleur de fond au survol */
+        }
+
+        /* Style pour le texte de l'input file */
+        input[type="file"] + label {
+            font-size: 14px; /* Taille de police */
+            color: #c3c3c3; /* Couleur du texte */
+        }
+
+        .form-group label {
+            margin-bottom: 10px; /* Espacement sous le label */
+            display: block; /* Assure que le label prend toute la largeur */
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#add-product-form').on('submit', function(e) {
+                e.preventDefault();
+                // Logique d'ajout de produit ici (AJAX ou autre)
+                // Vous pouvez récupérer les valeurs avec $('#product-name').val(), etc.
+                alert("Produit ajouté !");
+                $('#addProductModal').modal('hide');
+            });
+        });
+    </script>
+</body>
+</html>

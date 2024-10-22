@@ -6,199 +6,30 @@
         
         <title>Store locator Admin</title>
 
-        <!--<link rel="stylesheet" type="text/css" th:href="@{/css/jquery-ui.css}">-->
-        <link rel="stylesheet" type="text/css" href="https://my.new.mobilosoft.com/css/components/datetime-picker.css">
-        <link rel="stylesheet" href="./global.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/global-added.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/font-awesome.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/notify.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/jquery-ui.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/chosen.min.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/HoldOn.min.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/emojionearea.min.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/richtext.min.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="./css/components/datetime-picker.css">
+        <link rel="stylesheet" href="./css/global.css" type="text/css">
+        <link rel="stylesheet" href="./css/global-added.css" type="text/css">
+        <link rel="stylesheet" href="./css/font-awesome.css" type="text/css">
+        <link rel="stylesheet" href="./css/notify.css" type="text/css">
+        <link rel="stylesheet" href="./css/jquery-ui.css" type="text/css">
+        <link rel="stylesheet" href="./css/chosen.min.css" type="text/css">
+        <link rel="stylesheet" href="./css/HoldOn.min.css" type="text/css">
+        <link rel="stylesheet" href="./css/emojionearea.min.css" type="text/css">
+        <link rel="stylesheet" href="./css/richtext.min.css" type="text/css">
         <link rel="stylesheet" href="" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/daterangepicker.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/multi-select.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/switch.css" type="text/css">
-        <link rel="stylesheet" href="https://my.new.mobilosoft.com/css/reporting-ui/index.css" type="text/css">
+        <link rel="stylesheet" href="./css/daterangepicker.css" type="text/css">
+        <link rel="stylesheet" href="./css/multi-select.css" type="text/css">
+        <link rel="stylesheet" href="./css/switch.css" type="text/css">
+        <link rel="stylesheet" href="./css/reporting-ui/index.css" type="text/css">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <!--Icon -->
-        <link rel="shortcut icon" href="https://my.new.mobilosoft.com/img/favicon.ico"/>
+        <link rel="shortcut icon" href="./img/favicon.ico"/>
         <meta name="google-site-verification" content="qzP41lOwwGJ6nyep8qwJtxHEzOvZ_ynBIpJeUHaKEgw" />
         <!-- Include GA4 and GTM tags from fragments/general.html -->
-        <style>
-
-            .report-summary {
-                display: flex;
-                justify-content: space-around;
-                width: 100%;
-                background-color: white;
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            }
-
-            .report-item {
-                text-align: center;
-                padding: 15px;
-            }
-
-            .report-item h3 {
-                font-size: 18px;
-                color: #333;
-                margin-bottom: 5px;
-            }
-
-            .report-item .amount {
-                font-size: 24px;
-                font-weight: bold;
-                color: #333;
-            }
-
-            .report-item .icon {
-                display: inline-block;
-                margin: 10px 0;
-                padding: 15px;
-                width: 100px;
-                font-size: 50px;
-                height: 100px;
-                border-radius: 2px;
-            }
-
-            .icon-interaction { background-color: #35d071; }
-            .icon-search { background-color: #f85151; }
-            .icon-establishment { background-color: #f9d77e; }
-
-            .report-item a {
-                color: #8a43f8;
-                text-decoration: none;
-                margin-top: 10px;
-                display: block;
-            }
-
-
-            .box ul {
-                list-style-type: circle; /* Type de puce */
-                margin: 1px; /* Espace autour de la liste */
-                padding: 0; /* Suppression de l'espace par défaut à l'intérieur de la liste */
-            }
-
-            .box ul li {
-                margin: 10px 0; /* Espacement entre les éléments de la liste */
-                font-family: Arial, sans-serif; /* Police */
-                font-size: 16px; /* Taille de la police */
-                color: #333; /* Couleur du texte */
-                position: relative; /* Position pour le style des puces personnalisées */
-                padding-left: 20px; /* Espace à gauche pour les puces */
-            }
-
-            .box ul li:before {
-                content: '✓'; /* Symbole de la puce personnalisée */
-                position: absolute; /* Positionnement absolu */
-                left: 0; /* Alignement à gauche */
-                color: #1942a1; /* Couleur du symbole */
-                font-size: 18px; /* Taille du symbole */
-            }
-
-            .box1{
-                border: none;
-            }
-
-        </style>
-        <!-- Google tag (gtag.js) -->
-        <script>
-            gaTrackingId = "G-E5FPWBFBPX";
-            googleTagManagerId = "GTM-K3W7C7NF";
-        </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=gaTrackingId"></script>
-        <script>
-            /*<![CDATA[*/
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            gtag('js', new Date());
-            gtag('config', gaTrackingId);
-
-            <!-- Google Tag Manager -->
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', googleTagManagerId);
-            <!-- End Google Tag Manager -->
-
-            // Initialize the dataLayer
-            window.dataLayer = window.dataLayer || [];
-            // Push data to the dataLayer
-            th:inline = "javascript"
-            dataLayer.push({
-                'event': 'trackingBySiteName',
-                'siteName': "demo-mobilosoft",
-            });
-            /*]]>*/
-        </script>
-        
-    
-    <!-- Include GA4 and GTM tags from fragments/general.html -->
-    
-        <!-- Google tag (gtag.js) -->
-        <script>
-            gaTrackingId = "G-E5FPWBFBPX";
-            googleTagManagerId = "GTM-K3W7C7NF";
-        </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=gaTrackingId"></script>
-        <script>
-            /*<![CDATA[*/
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
-            gtag('js', new Date());
-            gtag('config', gaTrackingId);
-
-            <!-- Google Tag Manager -->
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', googleTagManagerId);
-            <!-- End Google Tag Manager -->
-
-            // Initialize the dataLayer
-            window.dataLayer = window.dataLayer || [];
-            // Push data to the dataLayer
-            th:inline = "javascript"
-            dataLayer.push({
-                'event': 'trackingBySiteName',
-                'siteName': "demo-mobilosoft",
-            });
-            /*]]>*/
-        </script>
+        <link rel="stylesheet" href="./css/reporting.css">
         
     </head>
 
@@ -209,9 +40,22 @@
                     <img src="https://my.new.mobilosoft.com/img/logo.svg"/></a>
                 </div>
                 <ul>
+                    <li class="nav-client">
+                        <a href="./Page.html">Tableau de bord</a>
+                    </li>
+                    <li class="nav-settings">
+                        <a href="./index.html">Ajout d'emplacement</a>
+                    </li>
                     <li class="nav-reporting">
                         <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
                     </li>
+                    <li class="nav-status">
+                        <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a>
+                    </li>
+                    <li class="nav-inbox">
+                        <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des seo</a>
+                    </li>
+                    
                 </ul>
             </nav>
             <!-- OPEN CLOSE SECTION / EXPANDABLE -->
@@ -220,21 +64,32 @@
                     <a href=""><img src="https://my.new.mobilosoft.com/img/MyMobilosoft_Logo.png"/></a>
                 </div>
                 <ul>
+                    <li class="nav-client">
+                        <a href="./Page.html">Tableau de bord</a>
+                    </li>
+                    <li class="nav-settings">
+                        <a href="./index.html">Ajout d'emplacement</a>
+                    </li>
                     <li class="nav-reporting">
                         <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+                    </li>
+                    <li class="nav-status">
+                        <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a>
+                    </li>
+                    <li class="nav-inbox">
+                        <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des seo</a>
                     </li>
                 </ul>
             </div>
             <!-- OPEN CLOSE SECTION / EXPANDABLE -->
 
         </aside>
-
         <header>
             <ul class="breadcrumb">
                 <li><a href="#">Site</a></li>
                 <li><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/locations"><span style="font-weight: bold">demo-mobilosoft</span></a>
                 </li>
-                <li>Store locator</li>
+                <li>Tableau de bord</li>
                 
             </ul>
             <div class="profil" id="dv-profil">
@@ -249,9 +104,6 @@
                     
                     <div class="selectlist">
                         <ul>
-
-                            
-
                             <li><a href="/site/demo-mobilosoft/tasks">Tasks</a></li>
                             <li
                             ><a href="/profile/me/edit">Editer mon profil</a></li>
@@ -281,45 +133,27 @@
             </div>
         </header>
         <main>
-
             <div class="wrapper-title">
-                <h1>Créer votre store locator </h1>
-            </div>
-            <div>
-                <div>
-                    <div class="boxlined">
-                        <div class="aside-left">
-                            <ul class="subNavTabs">
-                                <!-- <li><a class="btn-nav" th:classappend="${activeMenu == 'settingKeys'} ? 'active' : ''" th:href="@{/admin/settings/keys}">Setting Keys</a></li> -->
-                                <li><a class="btn-nav active" href="/admin/clients">Tableau de bord des stores locator</a></li>
-                                <li><a class="btn-nav" href="./Store_Locator.html" >Création de votre store locator</a></li>
-                                <li><a class="btn-nav" href="/admin/api-users">Gestion de langue</a></li>
-                                <li><a class="btn-nav" href="/admin/api-mask-templates">Guide d'utilisation</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <h1>Tableau de bord</h1>
             </div>
             <div class="report-summary">
                 <div class="report-item">
                     <h3>VISITEURS</h3>
-                    <p class="amount">12,345</p>
+                    <p class="amount">200</p>
                     <div class="icon icon-interaction">
                         💬
                     </div>
                 </div>
-        
                 <div class="report-item">
-                    <h3>RECHERCHE</h3>
-                    <p class="amount">45,678</p>
+                    <h3>RECHERCHES</h3>
+                    <p class="amount">100</p>
                     <div class="icon icon-search">
                         🔍
                     </div>
                 </div>
-        
                 <div class="report-item">
                     <h3>ETABLISSEMENTS</h3>
-                    <p class="amount">128</p>
+                    <p class="amount">90</p>
                     <div class="icon icon-establishment">
                         🏢
                     </div>
@@ -329,31 +163,120 @@
                 <div class="col">
                     <div class="box">
                         <div class="box-inside">
-                            <h4>Activités récentes</h4>
-                            <ul>
-                                <li>Ajout de 5 nouveaux emplacements à New York</li>
-                                <li>Mise à jour du design pour la région de Paris</li>
-                                <li>Résolution d'un problème d'API Google Places</li>
-                            </ul>                            
+                            <h4>Magasins avec le plus d'Interactions</h4>
+                            <canvas id="interactionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-inside">
+                            <h4>Top 10 des établissements les plus visités</h4>
+                            <table class="table">
+                                <thead>
+                                    <th>Classement</th>
+                                    <th>Magasin</th>
+                                    <th>Nombre d'Interactions</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Carrefour Bruxelles</td>
+                                        <td>1,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Carrefour Anvers</td>
+                                        <td>1,300</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Carrefour Liège</td>
+                                        <td>1,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Carrefour Namur</td>
+                                        <td>1,100</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Carrefour Charleroi</td>
+                                        <td>1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Carrefour Mons</td>
+                                        <td>900</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Carrefour Bruges</td>
+                                        <td>850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Carrefour Louvain</td>
+                                        <td>800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Carrefour Tournai</td>
+                                        <td>750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Carrefour Namêche</td>
+                                        <td>700</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="box">
                         <div class="box-inside">
-                            <h4>Notifications récentes</h4>
-                            <ul>
-                                <li>Erreur de déploiement sur la région Europe</li>
-                                <li>Mise à jour réussie de la plateforme (v1.2.5)</li>
-                                <li>API Google Places non répondue pendant 2 minutes</li>
-                            </ul>                            
+                            <h4>Filtres de Recherche les Plus Demandés</h4>
+                            <canvas id="filterChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-inside">
+                            <h4>Produits les Plus Populaires en Click-and-Collect</h4>
+                            <table class="table">
+                                <thead>
+                                    <th>Produit</th>
+                                    <th>Nombre de Commandes</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Pain frais</td>
+                                        <td>1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lait</td>
+                                        <td>900</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fruits et légumes frais</td>
+                                        <td>850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Snacks</td>
+                                        <td>800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Produits bio</td>
+                                        <td>750</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="box">
                 <div class="box-inside">
-                    <h4>Etats du système</h4>
+                    <h4>États du système</h4>
                     <div class="row">
                         <div class="col">
                             <h4>API Status</h4>
@@ -361,14 +284,18 @@
                             <p style="margin-top: 10px;">Connexion à My Mobilosoft : <span class="sticker stick-warning">Erreur</span></p>
                         </div>
                         <div class="col">
-                           <h4>Dernier déploiement</h4>
-                            <p>Status :  <span class="sticker stick-succeed">Succès</span></p>
-                            <p> .  </p>
+                            <h4>Etat de la cache</h4>
+                            <p>Espace :  <span class="sticker stick-succeed">100</span></p>
+                            <p>Éléments en cache :  <span class="sticker stick-succeed">50</span></p>
                         </div>
                     </div>                      
                 </div>
             </div>
         </main>
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+        <script src="./script_board.js"></script>
         <script src="/js/jquery-3.4.1.min.js"></script>
         <script src="/js/jquery-ui.min.js"></script>
         <script src="/js/cloudinary-jquery.js"></script>
@@ -386,181 +313,8 @@
         <script src="/js/jquery.multi-select.min.js"></script>
         <script src="/js/switch.js"></script>
 
-        <!--block for custom js page-->
-        <script>
-            let lang = "fr";
-            let unauthorizedAction = "Non autoris\u00E9";
-            let localeLabel = {
-                "customRangeLabel": "P\u00E9riode personnalis\u00E9e",
-                "applyLabel": "Appliquer",
-                "cancelLabel": "Annuler"
-            };
-            moment.locale(lang);
-            let rangesDatePicker = {
-                "Aujourd'hui": [moment(), moment()],
-                "Hier": [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                "Les 7 derniers jours": [moment().subtract(6, 'days'), moment()],
-                "Les 30 derniers jours": [moment().subtract(29, 'days'), moment()],
-                "Ce mois": [moment().startOf('month'), moment().endOf('month')],
-                "Le mois dernier": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            };
-
-            let rangeReporting = {
-                "Les 7 derniers jours": [moment().subtract(6, 'days'), moment()],
-                "Les 30 derniers jours": [moment().subtract(29, 'days'), moment()],
-                "Ce mois": [moment().startOf('month'), moment().endOf('month')],
-                "Le mois dernier": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
-                "Cette ann\u00E9e": [moment().startOf('year'), moment().endOf('year')],
-                "L'ann\u00E9e derni\u00E8re": [moment().subtract(1, 'year').startOf('year'), moment().subtract(1, 'year').endOf('year')]
-            };
-        </script>
-
-
-            <script src="/js/sticker-site.js"></script>
-            <script>
-                let modalId = "#popDeleteClient";
-                let modal = $(document).find(modalId);
-                let redirectUrl = "/admin/clients";
-                let msg = "Client deleted";
-                let siteName = "demo-mobilosoft";
-                $(document).ready(function () {
-
-                    $(document).on('click', '.see-client', function (event) {
-                        event.preventDefault();
-                        var url = $(this).attr('href');
-                        console.log(url);
-                        $.ajax({
-                            url: url,
-                            type: 'GET',
-                            success: function (data) {
-                                document.location.href = url;
-                            }, error: function (error) {
-                                notifError("You don't have access to this client")
-                            }
-                        });
-                    });
-                    let showUsers = function () {
-                        $('.clickableRow').click(function () {
-                            let clientExternalId = $(this).attr('data-tagExternalId');
-                            if (clientExternalId) {
-                                let clientUsersUrl = '/admin/users/client/' + clientExternalId;
-                                window.location = clientUsersUrl;
-                            }
-                        });
-                    };
-                    let pagination = function () {
-                        $('.pagination').find('a').click(function (event) {
-                            event.preventDefault();
-                            var page = $(this).attr('page');
-                            searchAction(page);
-                        })
-                    };
-                    let deleteClient = function () {
-                        $(document).on('click', '.delete-client', function (event) {
-                            event.preventDefault();
-                            var url = $(this).attr('href');
-                            $(document).find('#popDeleteClientYes').attr("href", url);
-                            modal.addClass('visible');
-                        });
-                    }
-                    let searchAction = function (page) {
-                        var form = $('#search');
-                        var clientName = $("#search-client-name").val();
-                        var pageSize = $("#optPageSize").val();
-                        $.ajax({
-                            url: form.attr('action'),
-                            data: form.serialize() + '&page=' + page + '&size=' + pageSize + '&clientName=' + clientName,
-                            type: 'GET',
-                            success: function (result) {
-                                $("#listClient").html(result);
-                                $("#search-client-name").val(clientName);
-                                pagination();
-                                deleteClient();
-                                changeSize();
-                                showUsers();
-                            }, error: function (jqXHR, textStatus, errorThrown) {
-                            }
-                        })
-                    };
-                    let changeSize = function () {
-                        $("#optPageSize").change(function (event) {
-                            event.preventDefault();
-                            var page = $(this).attr('page');
-                            searchAction(page);
-                        });
-                    };
-                    let changeTxtFind = function () {
-                        $(document).on('keypress', '#search-client-name', function (event) {
-                            if (event.which == 13) {
-                                var page = $(this).attr('page');
-                                searchAction(page);
-                            }
-                        });
-                        $(document).on('click', '.btn_search_client', function (event) {
-                                var page = $(this).attr('page');
-                                searchAction(page);
-                        });
-                    };
-                    pagination();
-                    showUsers();
-                    deleteClient();
-                    changeSize();
-                    changeTxtFind();
-
-                });
-            </script>
-            <script src="/js/modal_confirmation.js"></script>
-
-
-
-
-        <!-- Intercom -->
-        <script>
-            let userName = 'Stagiaire Mobilosoft';
-            let userMail = 'stagiaire.mobilosoft@gmail.com';
-            let language = 'fr';
-
-            window.intercomSettings = {
-                app_id: "qa74k9j4",
-                name: userName,
-                email: userMail,
-                language_override: language
-            };
-        </script>
-        <script >(function () {
-            var w = window;
-            var ic = w.Intercom;
-            if (typeof ic === "function") {
-                ic('reattach_activator');
-                ic('update', intercomSettings);
-            } else {
-                var d = document;
-                var i = function () {
-                    i.c(arguments)
-                };
-                i.q = [];
-                i.c = function (args) {
-                    i.q.push(args)
-                };
-                w.Intercom = i;
-
-                function l() {
-                    var s = d.createElement('script');
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = 'https://widget.intercom.io/widget/qa74k9j4';
-                    var x = d.getElementsByTagName('script')[0];
-                    x.parentNode.insertBefore(s, x);
-                }
-
-                if (w.attachEvent) {
-                    w.attachEvent('onload', l);
-                } else {
-                    w.addEventListener('load', l, false);
-                }
-            }
-        })()
-        </script>
+        <script src="/js/sticker-site.js"></script>
+        <script src="/js/modal_confirmation.js"></script>
         <!-- / Intercom -->
 
     </body>

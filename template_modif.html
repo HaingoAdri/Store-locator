@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Personnalisation du Store Locator</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/components/datetime-picker.css">
+    <link rel="stylesheet" href="./css/global.css" type="text/css">
+    <link rel="stylesheet" href="./css/global-added.css" type="text/css">
+    <link rel="stylesheet" href="./css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="./css/notify.css" type="text/css">
+    <link rel="stylesheet" href="./css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="./css/chosen.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/HoldOn.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/emojionearea.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/richtext.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/daterangepicker.css" type="text/css">
+    <link rel="stylesheet" href="./css/multi-select.css" type="text/css">
+    <link rel="stylesheet" href="./css/switch.css" type="text/css">
+    <link rel="stylesheet" href="./css/reporting-ui/index.css" type="text/css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--Icon -->
+    <link rel="shortcut icon" href="./img/favicon.ico"/>
+    <meta name="google-site-verification" content="qzP41lOwwGJ6nyep8qwJtxHEzOvZ_ynBIpJeUHaKEgw" />
+    <link rel="stylesheet" href="./css/reporting.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .wrapper-title h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container-customization {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .customization-panel {
+            flex: 1;
+            padding: 20px;
+        }
+        .customization-panel h3 {
+            margin-bottom: 20px;
+        }
+        .customization-panel label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .customization-panel input,
+        .customization-panel select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .iframe-preview {
+            flex: 2;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 500px; /* Ajustez la hauteur selon vos besoins */
+        }
+    </style>
+</head>
+
+<body>
+    <aside>
+        <nav>
+            <div class="logo"><a href="">
+                <img src="https://my.new.mobilosoft.com/img/logo.svg"/></a>
+            </div>
+            <ul>
+                <li class="nav-client">
+                    <a href="./Page.html">Tableau de bord</a>
+                </li>
+                <li class="nav-settings">
+                    <a href="./index.html">Ajout d'emplacement</a>
+                </li>
+                <li class="nav-reporting">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+                </li>
+                <li class="nav-status">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a>
+                </li>
+                <li class="nav-inbox">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des SEO</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="expandable">
+            <div class="logoExp">
+                <a href=""><img src="https://my.new.mobilosoft.com/img/MyMobilosoft_Logo.png"/></a>
+            </div>
+            <ul>
+                <li class="nav-client">
+                    <a href="./Page.html">Tableau de bord</a>
+                </li>
+                <li class="nav-settings">
+                    <a href="./index.html">Ajout d'emplacement</a>
+                </li>
+                <li class="nav-reporting">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+                </li>
+                <li class="nav-status">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a>
+                </li>
+                <li class="nav-inbox">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des SEO</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <header>
+        <ul class="breadcrumb">
+            <li><a href="#">Site</a></li>
+            <li><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/locations"><span style="font-weight: bold">demo-mobilosoft</span></a></li>
+            <li>Choix de template</li>
+            <li>Modifier template 1</li>
+        </ul>
+        <div class="profil" id="dv-profil">
+            <div class="profil-pict">
+                <img src="https://my.new.mobilosoft.com/img/no-picture-user.png"/>
+            </div>
+            <h4 class="profil-name wrapSpecialSelect">
+                <a class="select-type" href="#">Stagiaire Mobilosoft</a>
+                <div class="selectlist">
+                    <ul>
+                        <li><a href="/site/demo-mobilosoft/tasks">Tasks</a></li>
+                        <li><a href="/profile/me/edit">Éditer mon profil</a></li>
+                        <li>
+                            <ul>
+                                <li><a href="/site/demo-mobilosoft/locations">demo-mobilosoft</a></li>
+                                <li><a href="/site/mobilosoft-prod/locations">mobilosoft-prod</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="profil-actions">
+                    <li>
+                        <a class="lock" href="/killSession">
+                            <img src="https://my.new.mobilosoft.com/img/icon-logout.png">
+                        </a>
+                    </li>
+                </ul>
+            </h4>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper-title" style="margin-bottom: 15px;">
+            <h1>Modification de template 1</h1>
+        </div>
+        <div class="boxlined">
+            <div class="aside-left">
+                <ul class="subNavTabs">
+                    <li><a class="btn-nav active" href="#">Choisir votre template</a></li>
+                    <li><a class="btn-nav" href="#">Créer votre design de store locator</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-customization">
+            <div class="customization-panel">
+                <h3>Paramètres de personnalisation</h3>
+                
+                <!-- Couleur principale -->
+                <label for="primary-color">Couleur principale</label>
+                <input type="color" id="primary-color" value="#206600">
+
+                <!-- Couleur des boutons -->
+                <label for="button-color">Couleur des boutons</label>
+                <input type="color" id="button-color" value="#4CAF50">
+
+                <!-- Couleur des bordures des inputs -->
+                <label for="input-border-color">Couleur des bordures des inputs</label>
+                <input type="color" id="input-border-color" value="#ccc">
+
+                <!-- Couleur des bordures des cartes -->
+                <label for="card-border-color">Couleur des bordures des cartes</label>
+                <input type="color" id="card-border-color" value="#ddd">
+
+                <!-- Typographie -->
+                <label for="font-family">Choix de la typographie</label>
+                <select id="font-family">
+                    <option value="'Arial', sans-serif">Arial</option>
+                    <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                    <option value="'Lucida Sans', sans-serif">Lucida Sans</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                </select>
+
+                <!-- Conteneur ou non -->
+                <label for="container-toggle">Utiliser un container Bootstrap</label>
+                <select id="container-toggle">
+                    <option value="container-fluid">Plein écran (container-fluid)</option>
+                    <option value="container">Avec container</option>
+                </select>
+            </div>
+
+            <iframe class="iframe-preview" id="template-preview" src="./template 1/medi_market.html"></iframe>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/cloudinary-jquery.js"></script>
+    <script src="/js/notify.js"></script>
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/moment-with-locales.js"></script>
+    <script src="/js/daterangepicker.min.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/js/global-added.js"></script>
+    <script src="/js/HoldOn.min.js"></script>
+    <script src="/js/chosen.jquery.min.js"></script>
+    <script src="/js/emojionearea.min.js"></script>
+    <script src="/js/jquery.richtext.min.js"></script>
+    <script src="/js/jquery.multi-select.min.js"></script>
+    <script src="/js/switch.js"></script>
+    <script src="/js/sticker-site.js"></script>
+    <script src="/js/modal_confirmation.js"></script>
+</body>
+</html>

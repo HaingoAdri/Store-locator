@@ -1,0 +1,75 @@
+.report-summary {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.report-item {
+    text-align: center;
+    padding: 15px;
+}
+
+.report-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.report-item .amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.report-item .icon {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 15px;
+    width: 100px;
+    font-size: 50px;
+    height: 100px;
+    border-radius: 2px;
+}
+
+.icon-interaction { background-color: #35d071; }
+.icon-search { background-color: #f85151; }
+.icon-establishment { background-color: #f9d77e; }
+
+.report-item a {
+    color: #8a43f8;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+
+.box ul {
+    list-style-type: circle; /* Type de puce */
+    margin: 1px; /* Espace autour de la liste */
+    padding: 0; /* Suppression de l'espace par défaut à l'intérieur de la liste */
+}
+
+.box ul li {
+    margin: 10px 0; /* Espacement entre les éléments de la liste */
+    font-family: Arial, sans-serif; /* Police */
+    font-size: 16px; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+    position: relative; /* Position pour le style des puces personnalisées */
+    padding-left: 20px; /* Espace à gauche pour les puces */
+}
+
+.box ul li:before {
+    content: '✓'; /* Symbole de la puce personnalisée */
+    position: absolute; /* Positionnement absolu */
+    left: 0; /* Alignement à gauche */
+    color: #1942a1; /* Couleur du symbole */
+    font-size: 18px; /* Taille du symbole */
+}
+
+.box1{
+    border: none;
+}

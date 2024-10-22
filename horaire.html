@@ -1,0 +1,819 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>My Mobilosoft Locations</title>
+
+    <!--<link rel="stylesheet" type="text/css" th:href="@{/css/jquery-ui.css}">-->
+    <link rel="stylesheet" type="text/css" href="/css/components/datetime-picker.css">
+    <link rel="stylesheet" href="/css/global.css" type="text/css">
+    <link rel="stylesheet" href="/css/global-added.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="/css/notify.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/css/chosen.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/HoldOn.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/emojionearea.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/richtext.min.css" type="text/css">
+    <link rel="stylesheet" href="" type="text/css">
+    <link rel="stylesheet" href="/css/daterangepicker.css" type="text/css">
+    <link rel="stylesheet" href="/css/multi-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/switch.css" type="text/css">
+    <link rel="stylesheet" href="/css/reporting-ui/index.css" type="text/css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--Icon -->
+    <link rel="shortcut icon" href="/img/favicon.ico"/>
+    <meta name="google-site-verification" content="qzP41lOwwGJ6nyep8qwJtxHEzOvZ_ynBIpJeUHaKEgw" />
+</head>
+
+<body>
+    <aside>
+        <nav>
+            <div class="logo"><a href="">
+                <img src="https://my.new.mobilosoft.com/img/logo.svg"/></a>
+            </div>
+            <ul>
+                <li class="nav-client">
+                    <a href="./Page.html">Tableau de bord</a>
+                </li>
+                <li class="nav-settings">
+                    <a href="./index.html">Ajout d'emplacement</a>
+                </li>
+                <li class="nav-reporting">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+                </li>
+                <li class="nav-status">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a>
+                </li>
+                <li class="nav-inbox">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des seo</a>
+                </li>
+                
+            </ul>
+        </nav>
+        <!-- OPEN CLOSE SECTION / EXPANDABLE -->
+        <div class="expandable">
+            <div class="logoExp">
+                <a href=""><img src="https://my.new.mobilosoft.com/img/MyMobilosoft_Logo.png"/></a>
+            </div>
+            <ul>
+                <li class="nav-client">
+                    <a href="./Page.html">Tableau de bord</a>
+                </li>
+                <li class="nav-settings">
+                    <a href="./index.html">Ajout d'emplacement</a>
+                </li>
+                <li class="nav-reporting">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Store locator</a>
+                </li>
+                <li class="nav-status">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des caches</a>
+                </li>
+                <li class="nav-inbox">
+                    <a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/reporting/location">Gestion des seo</a>
+                </li>
+            </ul>
+        </div>
+        <!-- OPEN CLOSE SECTION / EXPANDABLE -->
+
+    </aside>
+    <header>
+        <ul class="breadcrumb">
+            <li><a href="#">Site</a></li>
+            <li><a href="https://my.new.mobilosoft.com/site/demo-mobilosoft/locations"><span style="font-weight: bold">demo-mobilosoft</span></a>
+            </li>
+            <li>A9 MONTPELLIER AMBRUSSUM [ 1297 ]</li>
+            <li>Horaires</li>
+            
+        </ul>
+        <div class="profil" id="dv-profil">
+            
+            <div class="profil-pict">
+                
+                <img src="https://my.new.mobilosoft.com/img/no-picture-user.png"/>
+            </div>
+
+            <h4 class="profil-name wrapSpecialSelect">
+                <a class="select-type" href="#">Stagiaire Mobilosoft</a>
+                
+                <div class="selectlist">
+                    <ul>
+                        <li><a href="/site/demo-mobilosoft/tasks">Tasks</a></li>
+                        <li
+                        ><a href="/profile/me/edit">Editer mon profil</a></li>
+
+
+                        <li>
+                            <ul>
+                                <li>
+                                    <a href="/site/demo-mobilosoft/locations">demo-mobilosoft</a>
+                                </li>
+                                <li>
+                                    <a href="/site/mobilosoft-prod/locations">mobilosoft-prod</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="profil-actions">
+                    <li>
+                        <a class="lock" href="/killSession">
+                            <img src="https://my.new.mobilosoft.com/img/icon-logout.png">
+                        </a>
+                    </li>
+                    
+                </ul>
+            </h4>
+        </div>
+    </header>
+<div>
+</div>
+<main>
+    <!-- Title of the page -->
+    <div class="wrapper-title">
+        <h1>Heures d&#39;ouverture</h1>
+    </div>
+    <!-- @Title of the page -->
+
+    <!-- ******* SUBNAV ******* -->
+    <div><div>
+    <div class="boxlined">
+                <div class="aside-left">
+                    <ul class="subNavTabs">
+                        <li>
+                            <a class="btn-nav "
+                            href="./modif.html">Informations</a>
+                        </li>
+                        <li>
+                            <a class="btn-nav active"
+                            href="./horaire.html">Heures d&#39;ouverture</a>
+                        </li>
+                        <li>
+                            <a class="btn-nav"
+                            href="./image.html ">Images</a>
+                        </li>
+                        <li>
+                            <a class="btn-nav "
+                            href="./services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="btn-nav"
+                            href="./produit.html">Stock de produit</a>
+                        </li>
+                    </ul>
+                </div>
+    </div>
+
+</div></div>
+    <!-- ******* @SUBNAV ******* -->
+
+    <!-- ******* DIV CONTENT OPENINGHOUR ******* -->
+    <div class="box">
+        <!-- ******* FRAGMENT BUSINESSHOUR ******* -->
+        <div class="box-inside" id="businessHoursBlock"><div class="businesshours-block">
+    <div class="box-title">
+        <h2>Horaires du point de vente</h2>
+    </div>
+    <form class="form" id="businesshoursForm"
+          method="post"
+          action="/site/mcdonalds-fr/locations/4a107342-1bb3-47ef-bf84-10cc078ce7b7/saveBusinessHours">
+        <fieldset>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>
+                        <strong>Lundi</strong>
+                        <input type="hidden" id="businessHourFormList0.dayIndice" name="businessHourFormList[0].dayIndice" value="1">
+                    </td>
+                    <td>
+                        <span id="firstRange0">
+                            <span>De</span>
+                            <input class="inlineinput hourinput time"
+                               placeholder="HH:mm"
+                               id="firstRangeStartRange0"
+                               type="text" value="10:00" name="businessHourFormList[0].startRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="firstRangeEndRange0"
+                                type="text" value="22:00" name="businessHourFormList[0].endRange">
+                        </span>
+                    </td>
+                    <td>
+                        <span id="additionalRange0">
+                            <span>De</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeStartRange0" type="text" value="" name="businessHourFormList[0].startAdditionalRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeEndRange0"
+                                type="text" value="" name="businessHourFormList[0].endAdditionalRange">
+                        </span>
+                    </td>
+                    <td class="actions">
+                        <a class="btn btn-small" id="add0"
+                           onclick="add(0)"><b><img src="./btn-plus.png"></b></a>
+                        <a class="delete" id="remove0"
+                           onclick="remove(0)"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Mardi</strong>
+                        <input type="hidden" id="businessHourFormList1.dayIndice" name="businessHourFormList[1].dayIndice" value="2">
+                    </td>
+                    <td>
+                        <span id="firstRange1">
+                            <span>De</span>
+                            <input class="inlineinput hourinput time"
+                               placeholder="HH:mm"
+                               id="firstRangeStartRange1"
+                               type="text" value="10:00" name="businessHourFormList[1].startRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="firstRangeEndRange1"
+                                type="text" value="22:00" name="businessHourFormList[1].endRange">
+                        </span>
+                    </td>
+                    <td>
+                        <span id="additionalRange1">
+                            <span>De</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeStartRange1" type="text" value="" name="businessHourFormList[1].startAdditionalRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeEndRange1"
+                                type="text" value="" name="businessHourFormList[1].endAdditionalRange">
+                        </span>
+                    </td>
+                    <td class="actions">
+                        <a class="btn btn-small" id="add1"
+                           onclick="add(1)"><b><img src="./btn-plus.png"></b></a>
+                        <a class="delete" id="remove1"
+                           onclick="remove(1)"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Mercredi</strong>
+                        <input type="hidden" id="businessHourFormList2.dayIndice" name="businessHourFormList[2].dayIndice" value="3">
+                    </td>
+                    <td>
+                        <span id="firstRange2">
+                            <span>De</span>
+                            <input class="inlineinput hourinput time"
+                               placeholder="HH:mm"
+                               id="firstRangeStartRange2"
+                               type="text" value="10:00" name="businessHourFormList[2].startRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="firstRangeEndRange2"
+                                type="text" value="22:00" name="businessHourFormList[2].endRange">
+                        </span>
+                    </td>
+                    <td>
+                        <span id="additionalRange2">
+                            <span>De</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeStartRange2" type="text" value="" name="businessHourFormList[2].startAdditionalRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeEndRange2"
+                                type="text" value="" name="businessHourFormList[2].endAdditionalRange">
+                        </span>
+                    </td>
+                    <td class="actions">
+                        <a class="btn btn-small" id="add2"
+                           onclick="add(2)"><b><img src="./btn-plus.png"></b></a>
+                        <a class="delete" id="remove2"
+                           onclick="remove(2)"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Jeudi</strong>
+                        <input type="hidden" id="businessHourFormList3.dayIndice" name="businessHourFormList[3].dayIndice" value="4">
+                    </td>
+                    <td>
+                        <span id="firstRange3">
+                            <span>De</span>
+                            <input class="inlineinput hourinput time"
+                               placeholder="HH:mm"
+                               id="firstRangeStartRange3"
+                               type="text" value="10:00" name="businessHourFormList[3].startRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="firstRangeEndRange3"
+                                type="text" value="22:00" name="businessHourFormList[3].endRange">
+                        </span>
+                    </td>
+                    <td>
+                        <span id="additionalRange3">
+                            <span>De</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeStartRange3" type="text" value="" name="businessHourFormList[3].startAdditionalRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeEndRange3"
+                                type="text" value="" name="businessHourFormList[3].endAdditionalRange">
+                        </span>
+                    </td>
+                    <td class="actions">
+                        <a class="btn btn-small" id="add3"
+                           onclick="add(3)"><b><img src="./btn-plus.png"></b></a>
+                        <a class="delete" id="remove3"
+                           onclick="remove(3)"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Vendredi</strong>
+                        <input type="hidden" id="businessHourFormList4.dayIndice" name="businessHourFormList[4].dayIndice" value="5">
+                    </td>
+                    <td>
+                        <span id="firstRange4">
+                            <span>De</span>
+                            <input class="inlineinput hourinput time"
+                               placeholder="HH:mm"
+                               id="firstRangeStartRange4"
+                               type="text" value="10:00" name="businessHourFormList[4].startRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="firstRangeEndRange4"
+                                type="text" value="23:00" name="businessHourFormList[4].endRange">
+                        </span>
+                    </td>
+                    <td>
+                        <span id="additionalRange4">
+                            <span>De</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeStartRange4" type="text" value="" name="businessHourFormList[4].startAdditionalRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeEndRange4"
+                                type="text" value="" name="businessHourFormList[4].endAdditionalRange">
+                        </span>
+                    </td>
+                    <td class="actions">
+                        <a class="btn btn-small" id="add4"
+                           onclick="add(4)"><b><img src="./btn-plus.png"></b></a>
+                        <a class="delete" id="remove4"
+                           onclick="remove(4)"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Samedi</strong>
+                        <input type="hidden" id="businessHourFormList5.dayIndice" name="businessHourFormList[5].dayIndice" value="6">
+                    </td>
+                    <td>
+                        <span id="firstRange5">
+                            <span>De</span>
+                            <input class="inlineinput hourinput time"
+                               placeholder="HH:mm"
+                               id="firstRangeStartRange5"
+                               type="text" value="10:00" name="businessHourFormList[5].startRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="firstRangeEndRange5"
+                                type="text" value="23:00" name="businessHourFormList[5].endRange">
+                        </span>
+                    </td>
+                    <td>
+                        <span id="additionalRange5">
+                            <span>De</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeStartRange5" type="text" value="" name="businessHourFormList[5].startAdditionalRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeEndRange5"
+                                type="text" value="" name="businessHourFormList[5].endAdditionalRange">
+                        </span>
+                    </td>
+                    <td class="actions">
+                        <a class="btn btn-small" id="add5"
+                           onclick="add(5)"><b><img src="./btn-plus.png"></b></a>
+                        <a class="delete" id="remove5"
+                           onclick="remove(5)"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Dimanche</strong>
+                        <input type="hidden" id="businessHourFormList6.dayIndice" name="businessHourFormList[6].dayIndice" value="7">
+                    </td>
+                    <td>
+                        <span id="firstRange6">
+                            <span>De</span>
+                            <input class="inlineinput hourinput time"
+                               placeholder="HH:mm"
+                               id="firstRangeStartRange6"
+                               type="text" value="10:00" name="businessHourFormList[6].startRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="firstRangeEndRange6"
+                                type="text" value="23:00" name="businessHourFormList[6].endRange">
+                        </span>
+                    </td>
+                    <td>
+                        <span id="additionalRange6">
+                            <span>De</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeStartRange6" type="text" value="" name="businessHourFormList[6].startAdditionalRange"> <span>À</span> <input
+                                class="inlineinput hourinput time"
+                                placeholder="HH:mm"
+                                id="additionalRangeEndRange6"
+                                type="text" value="" name="businessHourFormList[6].endAdditionalRange">
+                        </span>
+                    </td>
+                    <td class="actions">
+                        <a class="btn btn-small" id="add6"
+                           onclick="add(6)"><b><img src="./btn-plus.png"></b></a>
+                        <a class="delete" id="remove6"
+                           onclick="remove(6)"></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="wrapSubmit">
+                <input class="btn" value="Enregistrer" type="submit">
+            </div>
+        </fieldset>
+    </form>
+</div></div>
+        <!-- ******* FRAGMENT BUSINESSHOUR ******* -->
+    </div>
+
+    <div class="box">
+        <div class="box-inside" id="formSpecialHour"><div class="addspecialhoursfragment-block" >
+    <div>
+        <div class="box-title"  >
+            <h2>Ajouter un horaire exceptionnel</h2>
+        </div>
+        <div class="box-inside" >
+            <form class="form" id="specialhourForm"
+                  action="/site/mcdonalds-fr/locations/4a107342-1bb3-47ef-bf84-10cc078ce7b7/saveExceptionalHour"
+                  method="POST">
+                <input type="hidden" id="idSpecialhour" name="idSpecialhour" value="">
+                <div class="row">
+                    <div class="col">
+                        <input id="specialHourClosed" type="hidden" name="closed" value="false">
+                        <label><strong>1.</strong> Le point de vente est exceptionnellement</label>
+                        <div class="btn-group btn-group-full">
+                            <button class="toggle active" id="specialHourOpenButton" type="button">Ouvert</button>
+                            <button class="toggle" id="specialHourClosedButton" type="button">Fermé</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input id="specialHourPeriod" type="hidden" name="period" value="false">
+                        <label><strong>2.</strong> <span><strong style="color: red;">* </strong></span>
+                            Sélectionnez une date </label>
+                        <div class="btn-group btn-group-full">
+                            <button class="toggle active" id="specialHourOnedayButton" type="button">Jour unique</button>
+                            <button class="toggle" id="specialHourPeriodButton" type="button">Période</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" id="specialHourStartDate">
+                        <input type="date" class="calendar  ">
+                        <input type="hidden" id="startDate" name="startDate" value="">
+                    </div>
+                    <div class="col" id="specialHourEndDate">
+                        <input class="calendar" type="date">
+                        <input type="hidden" id="endDate" name="endDate" value="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label><strong>3.</strong> <span>Description</span> (Max 100)</label>
+                        <input type="text" id="description" name="description" value="">
+                    </div>
+                </div>
+
+                <div class="row" id="hourRangeDiv">
+                    <div class="col">
+                        <label><strong>4.</strong> <span><strong style="color: red;">* </strong></span>Plage horaire
+                        </label>
+                        <div class="row">
+                            <div class="col" id="specialhourFirstRange">
+                                <input class="inlineinput hourinput time" id="specialhourFirstRangeOpenTime"
+                                       placeholder="HH:mm"
+                                       type="text" value="" name="openTime"/>-<input
+                                    class="inlineinput hourinput time" placeholder="HH:mm"
+                                    type="text" value="" id="closeTime" name="closeTime"/>
+                            </div>
+                            <div class="col" id="specialhourAdditonalRange">
+                                <input class="inlineinput hourinput time" id="specialhourAdditonalRangeOpenTime"
+                                       placeholder="HH:mm" type="text" value="" name="additionalOpenTime"/>-<input class="inlineinput hourinput time"
+                                                                          placeholder="HH:mm"
+                                                                          type="text"
+                                                                          value="" id="additionalCloseTime" name="additionalCloseTime"/>
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-small" id="addSpecialHourRange"><b><img src="./btn-plus.png"></b></a>
+                                <a class="btn btn-small delete" id="removeSpecialHourRange"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapSubmit">
+                    <input class="btn" value="Enregistrer" type="submit" id="btn-save-special-hour">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!--<div class="box-footer">
+        <h3 th:text="#{announcespecialschedule}">Vous souhaitez annoncer cet horaire exceptionnel ?</h3>
+        <a class="btn btn-level2" href="#" th:text="#{makeapost}">Faire un post</a>
+    </div>-->
+</div></div>
+    </div>
+
+    <div class="box">
+        <div class="box-inside" id="specialHoursBlock"><div class="specialhoursfragment-block" >
+    <div class="box-title">
+        <h2>Horaires exceptionnels existants</h2>
+    </div>
+    <div class="box-inside">
+        <table class="table" id="specialHourList">
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+</div></div>
+
+        <div class="popupWrap" id="pop-exceptional-hour">
+            <div class="insidePopup">
+                <h2>Confirmation de suppression</h2>
+                <p>Cet horaire exceptionnel sera supprimé. Êtes-vous sûr ?</p>
+                <div class="wrapSubmit">
+                    <a class="btn" href="#" id="popDeleteExceptionalYes">Oui</a>
+                    <a class="btn" href="#" id="popDeleteExceptionalNo">Non</a>
+                </div>
+                <a class="closepopup" href="#">ClosePopup</a>
+            </div>
+        </div>
+    </div>
+    <!-- ******* @DIV CONTENT OPENINGHOUR ******* -->
+
+</main>
+
+<!-- **** -->
+<!-- @MAIN -->
+<!-- **** -->
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/datatables.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/cloudinary-jquery.js"></script>
+<script src="/js/notify.js"></script>
+<script src="/js/moment.min.js"></script>
+<script src="/js/moment-with-locales.js"></script>
+<script src="/js/daterangepicker.min.js"></script>
+<script src="/js/global.js"></script>
+<script src="/js/global-added.js"></script>
+<script src="/js/HoldOn.min.js"></script>
+<script src="/js/chosen.jquery.min.js"></script>
+<script src="/js/emojionearea.min.js"></script>
+<script src="/js/jquery.richtext.min.js"></script>
+<script src="/js/jquery.multi-select.min.js"></script>
+<script src="/js/switch.js"></script>
+
+
+<!--block for custom js page-->
+<script>
+    let lang = "fr";
+    let unauthorizedAction = "Non autoris\u00E9";
+    let localeLabel = {
+        "customRangeLabel": "P\u00E9riode personnalis\u00E9e",
+        "applyLabel": "Appliquer",
+        "cancelLabel": "Annuler"
+    };
+    moment.locale(lang);
+    let rangesDatePicker = {
+        "Aujourd'hui": [moment(), moment()],
+        "Hier": [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+        "Les 7 derniers jours": [moment().subtract(6, 'days'), moment()],
+        "Les 30 derniers jours": [moment().subtract(29, 'days'), moment()],
+        "Ce mois": [moment().startOf('month'), moment().endOf('month')],
+        "Le mois dernier": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+    };
+
+    let rangeReporting = {
+        "Les 7 derniers jours": [moment().subtract(6, 'days'), moment()],
+        "Les 30 derniers jours": [moment().subtract(29, 'days'), moment()],
+        "Ce mois": [moment().startOf('month'), moment().endOf('month')],
+        "Le mois dernier": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+        "Cette ann\u00E9e": [moment().startOf('year'), moment().endOf('year')],
+        "L'ann\u00E9e derni\u00E8re": [moment().subtract(1, 'year').startOf('year'), moment().subtract(1, 'year').endOf('year')]
+    };
+</script>
+
+
+    <script>
+        let invalidRangeError = "P\u00E9riode invalide pour les heures d'ouverture";
+        let invalidFormat = "Format invalide, merci de v\u00E9rifier";
+        let textError = "Description est trop longue. Max. 100 caract\u00E8res.";
+        let successSpecialHour = "Horaire exceptionnel sauvegard\u00E9";
+        let urlSpecialHours = '/site/' + "mcdonalds-fr" + '/locations/' + "4a107342-1bb3-47ef-bf84-10cc078ce7b7" + '/special_hours';
+        let clientName = "mcdonalds-fr";
+    </script>
+    <script src="/js/openinghours.js"></script>
+    <script>
+        const hours24Url = "\/txt\/hours_24.txt";
+        const hours12Url = "\/txt\/hours_12.txt";
+
+        let invalidSpecialHour = "Horaire sp\u00E9cial invalied, veuillez v\u00E9rifier";
+        let use24h = true;
+        let formatDateUser = "dd\/MM\/yyyy";
+        let hoursURL = (use24h) ? hours24Url : hours12Url;
+
+        $(document).ready(function () {
+            $('.calendar').removeClass('startDate startDateeee endDate endDateeeee');
+            if (formatDateUser === 'dd/MM/yyyy') {
+                $('#specialHourStartDate input.calendar').addClass('startDate');
+                $('#specialHourEndDate input.calendar').addClass('endDate');
+                $('.startDate, .endDate').attr('placeholder', 'dd/mm/yyyy');
+                $('.startDate').datepicker({
+                    dateFormat: 'dd/mm/yy',
+                    altField: '#startDate',
+                    altFormat: 'yy-mm-dd'
+                });
+                $('.endDate').datepicker({
+                    dateFormat: 'dd/mm/yy',
+                    altField: '#endDate',
+                    altFormat: 'yy-mm-dd'
+                });
+            } else if (formatDateUser === 'MM-dd-yyyy') {
+                $('#specialHourStartDate input.calendar').addClass('startDateeee');
+                $('#specialHourEndDate input.calendar').addClass('endDateeeee');
+                $('.startDateeee, .endDateeeee').attr('placeholder', 'MM-dd-yyyy');
+                $('.startDateeee').datepicker({
+                    dateFormat: 'mm/dd/yy',
+                    altField: '#startDate',
+                    altFormat: 'yy-mm-dd'
+                });
+                $('.endDateeeee').datepicker({
+                    dateFormat: 'mm/dd/yy',
+                    altField: '#endDate',
+                    altFormat: 'yy-mm-dd'
+                });
+            }
+        });
+
+
+        $(function () {
+            autocompleteTime(hoursURL);
+            initHideShowBusinessHour();
+            submitBusinessHour();
+            init();
+
+            function refreshSpecialHours() {
+                $("#specialHoursBlock").load(urlSpecialHours, function () {
+                    deleteEdit(refreshSpecialHours);
+                });
+            }
+
+            deleteEdit(refreshSpecialHours);
+            $('#specialhourForm').submit(function (event) {
+                event.preventDefault();
+                $("#btn-save-special-hour").attr("disabled", true);
+                var form = $('#specialhourForm');
+                form.find('input').removeClass('error');
+                $.ajax({
+                    url: form.attr('action'),
+                    data: form.serialize(),
+                    type: 'POST',
+                    success: function (result) {
+                        notifSuccess(successSpecialHour);
+                        form[0].reset();
+                        refreshSpecialHours();
+                        focusSpecialHourList();
+                        $("#btn-save-special-hour").attr("disabled", false);
+                    }, error: function (error) {
+                        if (error.responseJSON == undefined) {
+                            notifError(error.responseText);
+                        } else {
+                            var fiedls="";
+                            error.responseJSON.forEach(function (err) {
+                                    if (err.field=='startDate'||err.field=='endDate'){
+                                        $('.'+err.field).addClass('error');
+                                        fiedls+=err.field;
+                                    }else {
+                                        form.find('input[name="' + err.field + '"]').addClass('error');
+                                        fiedls+=err.field;
+                                    }
+                                }
+                            );
+                            if (fiedls.indexOf("description") >= 0){
+                                notifError(textError);
+                            }
+                            if (fiedls.indexOf("startDate") >= 0||fiedls.indexOf("endDate") >= 0){
+                                notifError(invalidSpecialHour);
+                            }
+                        }
+                        $("#btn-save-special-hour").attr("disabled", false);
+                    }
+                })
+            });
+
+            let urlDeleteExceptionalHour = '';
+            $(document).on('click', '.delte-exception-hour', function () {
+                event.preventDefault();
+                $('#pop-exceptional-hour').addClass('visible');
+                urlDeleteExceptionalHour = $(this).attr('href');
+            });
+
+            $(document).on('click', '#popDeleteExceptionalNo', function () {
+                event.preventDefault();
+                $('#pop-exceptional-hour').removeClass('visible');
+            });
+
+            $(document).on('click', '#popDeleteExceptionalYes', function () {
+                event.preventDefault();
+                $('#pop-exceptional-hour').removeClass('visible');
+                $.ajax({
+                    url: urlDeleteExceptionalHour,
+                    type: 'GET',
+                    success: function (result) {
+                        refreshSpecialHours();
+                        notifSuccess("Exceptional Hour successfully deleted !");
+                    }, error: function (XHR) {
+                        // Here you can handle exceptions thrown by the server or your controller.
+                        notifError("Bad request : internal error !");
+                        console.log(XHR.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+
+<!-- Intercom -->
+<script>
+    let userName = 'Stannis';
+    let userMail = 'christianostannis@gmail.com';
+    let language = 'nl';
+
+    window.intercomSettings = {
+        app_id: "qa74k9j4",
+        name: userName,
+        email: userMail,
+        language_override: language
+    };
+</script>
+<script >(function () {
+    var w = window;
+    var ic = w.Intercom;
+    if (typeof ic === "function") {
+        ic('reattach_activator');
+        ic('update', intercomSettings);
+    } else {
+        var d = document;
+        var i = function () {
+            i.c(arguments)
+        };
+        i.q = [];
+        i.c = function (args) {
+            i.q.push(args)
+        };
+        w.Intercom = i;
+
+        function l() {
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://widget.intercom.io/widget/qa74k9j4';
+            var x = d.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+
+        if (w.attachEvent) {
+            w.attachEvent('onload', l);
+        } else {
+            w.addEventListener('load', l, false);
+        }
+    }
+})()</script>
+<!-- / Intercom -->
+
+</body>
+</html>

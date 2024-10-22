@@ -1,0 +1,43 @@
+.dateTimeBox {
+    border-width: 1.22px;
+    border-color: rgb(226, 230, 239);
+    border-style: solid;
+    border-radius: 5px;
+    background-color: rgba(245, 246, 250, 0.459);
+    box-shadow: inset 0px 0px 7px 0px rgba(0, 0, 0, 0.07);
+    display: block;
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    color: #333;
+  }
+  .datetimepicker, .serviceHours {
+    display: inline-flex;
+    align-items: center;
+  }
+  .datetimepicker input {
+    font: inherit;
+    color: inherit;
+    appearance: none;
+    outline: none;
+    background: white;
+    border-style: hidden;
+  }
+  .datetimepicker input[type=date] {
+    width: 10rem;
+    padding: 0.25rem 0 0.25rem 0.5rem;
+    border-right-width: 0;
+    border: none;
+    background: transparent;
+  }
+  .datetimepicker input[type=time] {
+    width: 5.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 0;
+    border-left-width: 0;
+  }
+  .datetimepicker span {
+    height: 1rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    border-right: 1px solid #ddd;
+  }

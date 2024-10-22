@@ -423,7 +423,7 @@ h4 {
 .delete-Trash-icon {
     width: 15px;
     height: 15px;
-    background: url(../img/trash.png) no-repeat center center/20px;
+    background: url(../trash.png) no-repeat center center/20px;
     display: inline-block;
     padding: 20px;
 }
@@ -2170,28 +2170,32 @@ nav ul li.nav-post-beta {
 }
 
 nav ul li.nav-inbox {
-    background: url(../img/inbox.svg) no-repeat center center/30px;
+    background: url(../eye-solid.svg) no-repeat center center/30px;
+    color: white;
 }
 
 nav ul li.nav-reporting {
-    background: url(./map-location-dot-solid.svg) no-repeat center center/30px;
+    background: url(../map-location-dot-solid.svg) no-repeat center center/30px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 nav ul li.nav-reporting-beta {
-    background: url(./map-location-dot-solid.svg) no-repeat center center/30px;
+    background: url(../map-location-dot-solid.svg) no-repeat center center/30px;
 }
 
 nav ul li.nav-settings {
-    background: url(../img/nav-settings.svg) no-repeat center center/30px;
+    background: url(../location-crosshairs-solid.svg) no-repeat center center/30px;
+    color: white;
 }
 
 nav ul li.nav-client {
-    background: url(../img/nav-client.png) no-repeat center center/30px;
+    background: url(../gauge-solid.svg) no-repeat center center/30px;
+    color: white;
 }
 
 nav ul li.nav-status {
-    background: url(../img/nav-status.png) no-repeat center center/30px;
+    background: url(../memory-solid.svg) no-repeat center center/30px;
+    color: white;
 }
 
 nav ul li:hover,
