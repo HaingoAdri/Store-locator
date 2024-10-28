@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Personnalisation du Store Locator</title>
+    <!-- Vos liens CSS ici... -->
+    <style>
+        /* Votre style CSS ici... */
+    </style>
+</head>
+
+<body>
+    <!-- Votre contenu HTML ici... -->
+    <main>
+        <div class="container-customization">
+            <div class="customization-panel">
+                <h3>Paramètres de personnalisation</h3>
+                
+                <!-- Couleur principale -->
+                <label for="primary-color">Couleur principale</label>
+                <input type="color" id="primary-color" value="#206600">
+
+                <!-- Couleur des boutons -->
+                <label for="button-color">Couleur des boutons</label>
+                <input type="color" id="button-color" value="#4CAF50">
+
+                <!-- Couleur des bordures des inputs -->
+                <label for="input-border-color">Couleur des bordures des inputs</label>
+                <input type="color" id="input-border-color" value="#ccc">
+
+                <!-- Couleur des bordures des cartes -->
+                <label for="card-border-color">Couleur des bordures des cartes</label>
+                <input type="color" id="card-border-color" value="#ddd">
+
+                <!-- Typographie -->
+                <label for="font-family">Choix de la typographie</label>
+                <select id="font-family">
+                    <option value="'Arial', sans-serif">Arial</option>
+                    <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                    <option value="'Lucida Sans', sans-serif">Lucida Sans</option>
+                    <option value="'Times New Roman', serif">Times New Roman</option>
+                </select>
+
+                <!-- Conteneur ou non -->
+                <label for="container-toggle">Utiliser un container Bootstrap</label>
+                <select id="container-toggle">
+                    <option value="container-fluid">Plein écran (container-fluid)</option>
+                    <option value="container">Avec container</option>
+                </select>
+            </div>
+
+            <iframe class="iframe-preview" id="template-preview" src="./template 1/medi_market.html"></iframe>
+        </div>
+    </main>
+
+    <script>
+        const iframe = document.getElementById('template-preview');
+
+        // Fonction pour appliquer les styles
+        function applyStyles() {
+            const primaryColor = document.getElementById('primary-color').value;
+            const buttonColor = document.getElementById('button-color').value;
+            const inputBorderColor = document.getElementById('input-border-color').value;
+            const cardBorderColor = document.getElementById('card-border-color').value;
+            const fontFamily = document.getElementById('font-family').value;
+
+            const doc = iframe.contentWindow.document;
+
+            // Appliquer les styles
+            doc.body.style.setProperty('--primary-color', primaryColor);
+            doc.body.style.setProperty('--button-color', buttonColor);
+            doc.body.style.setProperty('--input-border-color', inputBorderColor);
+            doc.body.style.setProperty('--card-border-color', cardBorderColor);
+            doc.body.style.fontFamily = fontFamily;
+
+            // Vous pouvez également ajouter d'autres styles selon vos besoins
+        }
+
+        // Écouter les changements sur les entrées
+        document.getElementById('primary-color').addEventListener('input', applyStyles);
+        document.getElementById('button-color').addEventListener('input', applyStyles);
+        document.getElementById('input-border-color').addEventListener('input', applyStyles);
+        document.getElementById('card-border-color').addEventListener('input', applyStyles);
+        document.getElementById('font-family').addEventListener('change', applyStyles);
+        document.getElementById('container-toggle').addEventListener('change', applyStyles);
+    </script>
+</body>
+</html>

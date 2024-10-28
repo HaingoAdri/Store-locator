@@ -7,7 +7,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-style: italic;
       background-color: #f9f9f9;
       padding: 20px;
     }
@@ -17,6 +18,7 @@
     }
     .customization-panel {
       flex: 1;
+      width: 200px;
       background-color: #fff;
       padding: 20px;
       border-radius: 8px;
@@ -36,7 +38,20 @@
     .iframe-preview {
       flex: 2;
       border: 1px solid #ddd;
-      height: 600px;
+      height: auto;
+    }
+
+    .customization-panel {
+      display: grid;
+      
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .customization-section {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -46,59 +61,289 @@
   
   <div class="container-customization">
     <div class="customization-panel">
-      <h3>Paramètres de personnalisation</h3>
-      
-      <!-- Couleur principale -->
-      <label for="primary-color">Couleur principale</label>
-      <input type="color" id="primary-color" value="#206600">
+      <!-- Boutons -->
+      <div class="customization-section">
+        <h4>Boutons</h4>
+        <label for="button-color">Couleur des boutons</label>
+        <input type="color" id="button-color" value="#206600">
+        <label for="button-border-radius">Rondeur des boutons</label>
+        <input type="range" id="button-border-radius" value="4" min="0" max="50">
+      </div>
+    
+      <!-- Inputs -->
+      <div class="customization-section">
+        <h4>Inputs</h4>
+        <label for="input-color">Couleur des inputs</label>
+        <input type="color" id="input-color" value="#eff8ef">
+        <label for="input-border-color">Couleur des bordures des inputs</label>
+        <input type="color" id="input-border-color" value="#ccc">
+        <label for="border-radius">Arrondi des bordures des inputs</label>
+        <input type="range" id="border-radius" min="0" max="50" value="0">
+      </div>
+    
+      <!-- Cartes -->
+      <div class="customization-section">
+        <h4>Cartes</h4>
+        <label for="card-border-color">Couleur des bordures des cartes</label>
+        <input type="color" id="card-border-color" value="green">
+        <label for="card-border-radius">Rondeur des cartes</label>
+        <input type="range" id="card-border-radius" value="4" min="0" max="50">
+      </div>
+    
+      <!-- Titre -->
+      <div class="customization-section">
+        <h4>Titre</h4>
+        <label for="title-color">Couleur du titre</label>
+        <input type="color" id="title-color" value="#000000">
+      </div>
+    
+      <!-- Horaire -->
+      <div class="customization-section">
+        <h4>Horaire</h4>
+        <label for="status-color">Couleur des statuts</label>
+        <input type="color" id="status-color" value="red">
 
+        <label for="status-font-size">Taille des statuts</label>
+        <input type="range" id="status-font-size" min="10" max="20" value="14">
+
+        <label for="status-background">Fond des statuts</label>
+        <input type="color" id="status-background" value="#f0f0f0">
+
+        <label for="status-border-radius">Rondeur des statuts</label>
+        <input type="range" id="status-border-radius" value="4" min="0" max="20">
+      </div>
+    
+      <!-- Couleurs principales -->
+      <div class="customization-section">
+        <h4>Couleurs principales</h4>
+        <label for="primary-color">Couleur principale</label>
+        <input type="color" id="primary-color" value="#206600">
+      </div>
+    
+      <!-- Pins -->
+      <div class="customization-section">
+        <h4>Pins</h4>
+        <label for="pin-size">Taille des pins</label>
+        <input type="number" id="pin-size" value="40" min="10">
+        <label for="pin-color">Couleur des pins</label>
+        <input type="color" id="pin-color" value="#00FF00">
+        <label for="pin-icon-upload">Uploader une icône personnalisée</label>
+        <input type="file" id="pin-icon-upload" accept="image/png, image/jpeg">
+        <label for="pin-icon-url">Ou entrez une URL pour l'icône</label>
+        <input type="url" id="pin-icon-url" placeholder="https://example.com/icon.png">
+      </div>
+    
       <!-- Typographie -->
-      <label for="font-family">Choix de la typographie</label>
-      <select id="font-family">
-        <option value="'Arial', sans-serif">Arial</option>
-        <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
-        <option value="'Lucida Sans', sans-serif">Lucida Sans</option>
-        <option value="'Times New Roman', serif">Times New Roman</option>
-      </select>
-
-      <!-- Conteneur ou non -->
-      <label for="container-toggle">Utiliser un container Bootstrap</label>
-      <select id="container-toggle">
-        <option value="container-fluid">Plein écran (container-fluid)</option>
-        <option value="container">Avec container</option>
-      </select>
+      <div class="customization-section">
+        <h4>Typographie</h4>
+        <label for="font-family">Police de caractères</label>
+        <select id="font-family">
+          <option value="'Arial', sans-serif">Arial</option>
+          <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+          <option value="'Lucida Sans', sans-serif">Lucida Sans</option>
+          <option value="'Times New Roman', serif">Times New Roman</option>
+        </select>
+    
+        <label for="font-weight">Style de texte</label>
+        <select id="font-weight">
+          <option value="normal">Normal</option>
+          <option value="bold">Gras</option>
+          <option value="italic">Italique</option>
+        </select>
+    
+        <label for="font-size">Taille de la police</label>
+        <input type="range" id="font-size" min="12" max="24" value="16">
+      </div>
+      <div style="grid-column: span 2; text-align: center;">
+        <button id="preview-button">Prévisualiser</button>
+        <button id="export-button">Valider et Exporter en HTML</button>
+      </div>
     </div>
+    
 
     <iframe class="iframe-preview" id="template-preview" src="medi_market.html"></iframe>
   </div>
 
   <script>
     const iframe = document.getElementById('template-preview');
-    
+
+    window.addEventListener('resize', () => {
+      iframe.style.height = document.querySelector('.customization-panel').scrollHeight + 'px';
+    });
     iframe.onload = () => {
       const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+      // Mise à jour de la couleur du titre
+      document.getElementById('title-color').addEventListener('input', function() {
+        let titleColor = this.value;
+        
+        // Change la couleur du h3
+        iframeDoc.querySelector('h3').style.color = titleColor; 
+        
+        // Change la couleur de tous les h5
+        const h5Elements = iframeDoc.querySelectorAll('h5');
+        h5Elements.forEach(function(h5) {
+            h5.style.color = titleColor;
+        });
+    });
+
 
       // Mise à jour des couleurs
       document.getElementById('primary-color').addEventListener('input', function() {
         let color = this.value;
-        let elements = iframeDoc.querySelectorAll('.btn, .breadcrumb-item , .alphabet-section');
+
+        // Change la couleur d'arrière-plan pour les boutons et la section alphabétique
+        let elements = iframeDoc.querySelectorAll('.btn, .alphabet-section');
         elements.forEach(el => el.style.backgroundColor = color);
+        
+        // Change la couleur du texte pour les éléments avec la classe text-success
+        let successTextElements = iframeDoc.querySelectorAll('.text-success');
+        successTextElements.forEach(el => el.style.color = color);
+
+        // Change la couleur du texte pour les éléments de la section alphabétique
         iframeDoc.querySelector('.alphabet-section ul li').style.color = color;
+    });
+
+
+      // Mise à jour de la couleur des boutons
+      document.getElementById('button-color').addEventListener('input', function() {
+        let buttonColor = this.value;
+        let buttons = iframeDoc.querySelectorAll('.btn');
+        buttons.forEach(btn => btn.style.backgroundColor = buttonColor);
       });
 
-      // Mise à jour de la typographie
+      // Mise à jour de la rondeur des boutons (sauf le bouton "Rechercher")
+      document.getElementById('button-border-radius').addEventListener('input', function() {
+        let radius = this.value + 'px';
+        let buttons = iframeDoc.querySelectorAll('.btn:not(#search-button)'); // Exclure le bouton "Rechercher"
+        buttons.forEach(btn => btn.style.borderRadius = radius);
+      });
+
+      // Mise à jour de la couleur des inputs
+      document.getElementById('input-color').addEventListener('input', function() {
+        let inputColor = this.value;
+        let inputs = iframeDoc.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          input.style.backgroundColor = inputColor;
+        });
+      });
+
+      // Mise à jour de la couleur des bordures des inputs
+      document.getElementById('input-border-color').addEventListener('input', function() {
+        let borderColor = this.value;
+        let inputs = iframeDoc.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          input.style.borderColor = borderColor;
+        });
+      });
+
+      // Écouteur pour ajuster l'arrondi des bordures
+      document.getElementById('border-radius').addEventListener('input', function() {
+          let radius = this.value + 'px';
+
+          // Appliquer le rayon des bordures aux boutons et aux éléments de la section alphabétique
+          let elements = iframeDoc.querySelectorAll('input');
+          elements.forEach(el => el.style.borderRadius = radius);
+      });
+
+      // Mise à jour de la couleur des bordures des cartes
+      document.getElementById('card-border-color').addEventListener('input', function() {
+        let cardBorderColor = this.value;
+        let cards = iframeDoc.querySelectorAll('.card');
+        cards.forEach(card => card.style.borderColor = cardBorderColor);
+      });
+
+      // Mise à jour de la rondeur des cartes
+      document.getElementById('card-border-radius').addEventListener('input', function() {
+        let radius = this.value + 'px';
+        let cards = iframeDoc.querySelectorAll('.card');
+        cards.forEach(card => card.style.borderRadius = radius);
+      });
+
+      // Mise à jour de la taille des pins
+      document.getElementById('pin-size').addEventListener('input', function() {
+        let pinSize = this.value + 'px';
+        updatePinSize(pinSize);
+      });
+
+      // Mise à jour de la couleur des pins
+      document.getElementById('pin-color').addEventListener('input', function() {
+        let pinColor = this.value;
+        updatePinColor(pinColor);
+      });
+
+      // Upload d'une icône personnalisée pour les pins
+      document.getElementById('pin-icon-upload').addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const pinIconUrl = e.target.result;
+            updatePinIcon(pinIconUrl);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Utilisation d'une URL pour l'icône personnalisée
+      document.getElementById('pin-icon-url').addEventListener('input', function() {
+        const pinIconUrl = this.value;
+        updatePinIcon(pinIconUrl);
+      });
+
+      // Changer la typographie
       document.getElementById('font-family').addEventListener('change', function() {
-        iframeDoc.body.style.fontFamily = this.value;
+        let font = this.value;
+        iframeDoc.body.style.fontFamily = font;
       });
 
-      // Activer/désactiver le container Bootstrap
+      // Changer le conteneur
       document.getElementById('container-toggle').addEventListener('change', function() {
         let containerClass = this.value;
-        let container = iframeDoc.querySelector('.container-fluid, .container');
-        container.className = containerClass;
+        let container = iframeDoc.querySelector('.container, .container-fluid');
+        if (container) {
+          container.className = containerClass; // Change la classe du conteneur
+        }
       });
-    };
-  </script>
 
+      // Fonction pour mettre à jour la taille des pins
+      function updatePinSize(size) {
+        // Code pour mettre à jour la taille des pins dans la carte
+      }
+
+      // Fonction pour mettre à jour la couleur des pins
+      function updatePinColor(color) {
+        // Code pour mettre à jour la couleur des pins dans la carte
+      }
+
+      // Fonction pour mettre à jour l'icône des pins
+      function updatePinIcon(url) {
+        // Code pour mettre à jour l'icône des pins dans la carte
+      }
+    };
+    document.getElementById('preview-button').addEventListener('click', function() {
+      updatePreview();
+    });
+
+    document.getElementById('export-button').addEventListener('click', function() {
+      exportToHTML();
+    });
+
+    function updatePreview() {
+      const iframe = document.getElementById('preview-iframe').contentWindow.document;
+      // Appliquez ici toutes les modifications de style aux éléments de l'iframe
+      // Exemple : iframe.querySelector('h1').style.color = document.getElementById('title-color').value;
+    }
+
+    function exportToHTML() {
+      const iframe = document.getElementById('preview-iframe').contentWindow.document;
+      const htmlContent = iframe.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: 'text/html' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'custom_template.html';
+      link.click();
+    }
+  </script>
 </body>
 </html>
