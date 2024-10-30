@@ -1,0 +1,165 @@
+<style>
+    /* Style principal du conteneur */
+    .main-header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #FFFFFF;
+            height: 48px;
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+        }
+
+        /* Section de l'en-tête */
+        .header-top-space {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            width: 100%;
+            max-width: 1440px;
+            margin: auto;
+            padding: 0 32px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        /* Lien de navigation "Passer" */
+        .header-skip-link {
+            display: inline-block;
+            background-color: #FFFFFF;
+            border-radius: 5px;
+            color: #25232C;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 8px 16px;
+            position: absolute;
+            z-index: -1;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Logo */
+        .header-logo {
+            width: 51px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            bottom: -1px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-logo img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        /* Formulaire de recherche */
+        .search-bar {
+            display: flex;
+            flex-direction: column;
+            width: 360px;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-bar-container {
+            display: flex;
+            align-items: center;
+            background-color: #FFFFFF;
+            border: 0.5px solid #3D7585;
+            border-radius: 5px;
+            height: 32px;
+            overflow: hidden;
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            padding: 2px 10px;
+            font-family: Lato, Arial, sans-serif;
+            font-size: 14px;
+            color: #292E31;
+        }
+
+        .search-bar button {
+            background-color: #3D7585;
+            border: none;
+            height: 100%;
+            padding: 0 6px;
+            cursor: pointer;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Liens de navigation */
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            border-radius: 4px;
+            font-family: Lato, Arial, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22.88px;
+            color: #292E31;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-icon {
+            margin-right: 8px;
+            width: 24px;
+            height: 24px;
+        }
+</style>
+<body __processed_ea008b68-c408-4baf-afeb-c7ada9b7f2ba__="true"
+    bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNiIsInNjb3JlIjoyMDAxNn1d"
+    style="cursor: auto;background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;color:rgb(41, 46, 49);font-family:Lato, Arial, sans-serif;font-size:14px;line-height:20.02px;margin:0px;padding:0px;">
+<div bis_skin_checked="1" style="margin:0px;padding:0px;">
+    <div bis_skin_checked="1" style="display:flex;flex-direction:column;min-height:781.111px;margin:0px;padding:0px;">
+        <header data-testid="main-header" style="left:0px;position:sticky;right:0px;top:0px;z-index:6;">
+            <div bis_skin_checked="1" style="display:flex;flex-direction:column;margin:0px;padding:0px;"> 
+                <div class="main-header-wrapper">
+                    <div class="header-top-space">
+                        <a href="#main-content" class="header-skip-link">Passer</a>
+                        <div class="header-logo">
+                            <img src="https://store-locator-blush.vercel.app/delheize.svg" alt="Delhaize logo">
+                        </div>
+                        <div class="search-bar">
+                            <div class="search-bar-container">
+                                <input type="text" placeholder="Cherchez des produits ou des recettes" aria-label="Rechercher">
+                                <button type="submit" aria-label="Lancer la recherche">
+                                    <img src="https://store-locator-blush.vercel.app/searchs.svg" alt="Rechercher" class="nav-icon">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="nav-links">
+                            <a href="/customerhub/quick-shop/top-products" class="nav-link">
+                                <img src="https://store-locator-blush.vercel.app/refresh.svg" alt="" class="nav-icon"> Mes produits
+                            </a>
+                            <a href="/my-account/myLists" class="nav-link">
+                                <img src="https://store-locator-blush.vercel.app/coeur.svg" alt="" class="nav-icon"> Mes listes
+                            </a>
+                            <a href="/checkout" class="nav-link">
+                                <img src="https://store-locator-blush.vercel.app/compte.svg" alt="" class="nav-icon"> Se connecter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+</body>

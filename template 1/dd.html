@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personnalisation du Store Locator</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-style: italic;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+    .container-customization {
+      display: flex;
+      gap: 20px;
+    }
+    .customization-panel {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .customization-panel label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .customization-panel input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .iframe-preview {
+      flex: 2;
+      border: 1px solid #ddd;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Personnalisation du Store Locator</h1>
+  
+  <div class="container-customization">
+    <div class="customization-panel">
+      <h3>Paramètres de personnalisation</h3>
+      
+      <!-- Couleur du titre -->
+      <label for="title-color">Couleur du titre</label>
+      <input type="color" id="title-color" value="#000000">
+
+      <!-- Couleur principale -->
+      <label for="primary-color">Couleur principale</label>
+      <input type="color" id="primary-color" value="#206600">
+
+      <!-- Couleur des boutons -->
+      <label for="button-color">Couleur des boutons</label>
+      <input type="color" id="button-color" value="#206600">
+
+      <!-- Bordure des boutons -->
+      <label for="button-border-radius">Rondeur des boutons</label>
+      <input type="number" id="button-border-radius" value="4" min="0">
+
+      <!-- Couleur des inputs -->
+      <label for="input-color">Couleur des inputs</label>
+      <input type="color" id="input-color" value="#eff8ef">
+
+      <!-- Couleur des bordures des inputs -->
+      <label for="input-border-color">Couleur des bordures des inputs</label>
+      <input type="color" id="input-border-color" value="#ccc">
+
+      <!-- Bordure des cards -->
+      <label for="card-border-color">Couleur des bordures de card</label>
+      <input type="color" id="card-border-color" value="green">
+
+      <!-- Rondeur des cartes -->
+      <label for="card-border-radius">Rondeur des cartes</label>
+      <input type="number" id="card-border-radius" value="4" min="0">
+
+      <!-- Taille des pins -->
+      <label for="pin-size">Taille des pins</label>
+      <input type="number" id="pin-size" value="40" min="10">
+
+      <!-- Couleur des pins -->
+      <label for="pin-color">Couleur des pins</label>
+      <input type="color" id="pin-color" value="#00FF00">
+
+      <!-- Upload d'une icône personnalisée pour les pins -->
+      <label for="pin-icon-upload">Uploader une icône personnalisée</label>
+      <input type="file" id="pin-icon-upload" accept="image/png, image/jpeg">
+
+      <!-- URL pour l'icône personnalisée -->
+      <label for="pin-icon-url">Ou entrez une URL pour l'icône</label>
+      <input type="url" id="pin-icon-url" placeholder="https://example.com/icon.png">
+
+      <!-- Typographie -->
+      <label for="font-family">Choix de la typographie</label>
+      <select id="font-family">
+        <option value="'Arial', sans-serif">Arial</option>
+        <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+        <option value="'Lucida Sans', sans-serif">Lucida Sans</option>
+        <option value="'Times New Roman', serif">Times New Roman</option>
+      </select>
+
+      <!-- Conteneur ou non -->
+      <label for="container-toggle">Utiliser un container Bootstrap</label>
+      <select id="container-toggle">
+        <option value="container-fluid">Plein écran (container-fluid)</option>
+        <option value="container">Avec container</option>
+      </select>
+    </div>
+
+    <iframe class="iframe-preview" id="template-preview" src="medi_market.html"></iframe>
+  </div>
+
+  <script>
+    const iframe = document.getElementById('template-preview');
+
+    iframe.onload = () => {
+      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+      // Mise à jour de la couleur du titre
+      document.getElementById('title-color').addEventListener('input', function() {
+        let titleColor = this.value;
+        iframeDoc.querySelector('h1').style.color = titleColor; // Assurez-vous que le titre est un h1 dans l'iframe
+      });
+
+      // Mise à jour des couleurs
+      document.getElementById('primary-color').addEventListener('input', function() {
+        let color = this.value;
+        let elements = iframeDoc.querySelectorAll('.btn, .breadcrumb-item, .alphabet-section');
+        elements.forEach(el => el.style.backgroundColor = color);
+        iframeDoc.querySelector('.alphabet-section ul li').style.color = color;
+      });
+
+      // Mise à jour de la couleur des boutons
+      document.getElementById('button-color').addEventListener('input', function() {
+        let buttonColor = this.value;
+        let buttons = iframeDoc.querySelectorAll('.btn');
+        buttons.forEach(btn => btn.style.backgroundColor = buttonColor);
+      });
+
+      // Mise à jour de la rondeur des boutons (sauf le bouton "Rechercher")
+      document.getElementById('button-border-radius').addEventListener('input', function() {
+        let radius = this.value + 'px';
+        let buttons = iframeDoc.querySelectorAll('.btn:not(#search-button)'); // Exclure le bouton "Rechercher"
+        buttons.forEach(btn => btn.style.borderRadius = radius);
+      });
+
+      // Mise à jour de la couleur des inputs
+      document.getElementById('input-color').addEventListener('input', function() {
+        let inputColor = this.value;
+        let inputs = iframeDoc.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          input.style.backgroundColor = inputColor;
+        });
+      });
+
+      // Mise à jour de la couleur des bordures des inputs
+      document.getElementById('input-border-color').addEventListener('input', function() {
+        let borderColor = this.value;
+        let inputs = iframeDoc.querySelectorAll('input, select');
+        inputs.forEach(input => {
+          input.style.borderColor = borderColor;
+        });
+      });
+
+      // Mise à jour de la couleur des bordures des cartes
+      document.getElementById('card-border-color').addEventListener('input', function() {
+        let cardBorderColor = this.value;
+        let cards = iframeDoc.querySelectorAll('.card');
+        cards.forEach(card => card.style.borderColor = cardBorderColor);
+      });
+
+      // Mise à jour de la rondeur des cartes
+      document.getElementById('card-border-radius').addEventListener('input', function() {
+        let radius = this.value + 'px';
+        let cards = iframeDoc.querySelectorAll('.card');
+        cards.forEach(card => card.style.borderRadius = radius);
+      });
+
+      // Mise à jour de la taille des pins
+      document.getElementById('pin-size').addEventListener('input', function() {
+        let pinSize = this.value + 'px';
+        updatePinSize(pinSize);
+      });
+
+      // Mise à jour de la couleur des pins
+      document.getElementById('pin-color').addEventListener('input', function() {
+        let pinColor = this.value;
+        updatePinColor(pinColor);
+      });
+
+      // Upload d'une icône personnalisée pour les pins
+      document.getElementById('pin-icon-upload').addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const pinIconUrl = e.target.result;
+            updatePinIcon(pinIconUrl);
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Utilisation d'une URL pour l'icône personnalisée
+      document.getElementById('pin-icon-url').addEventListener('input', function() {
+        const pinIconUrl = this.value;
+        updatePinIcon(pinIconUrl);
+      });
+
+      // Changer la typographie
+      document.getElementById('font-family').addEventListener('change', function() {
+        let font = this.value;
+        iframeDoc.body.style.fontFamily = font;
+      });
+
+      // Changer le conteneur
+      document.getElementById('container-toggle').addEventListener('change', function() {
+        let containerClass = this.value;
+        let container = iframeDoc.querySelector('.container, .container-fluid');
+        if (container) {
+          container.className = containerClass; // Change la classe du conteneur
+        }
+      });
+
+      // Fonction pour mettre à jour la taille des pins
+      function updatePinSize(size) {
+        // Code pour mettre à jour la taille des pins dans la carte
+      }
+
+      // Fonction pour mettre à jour la couleur des pins
+      function updatePinColor(color) {
+        // Code pour mettre à jour la couleur des pins dans la carte
+      }
+
+      // Fonction pour mettre à jour l'icône des pins
+      function updatePinIcon(url) {
+        // Code pour mettre à jour l'icône des pins dans la carte
+      }
+    };
+  </script>
+</body>
+</html>
